@@ -134,7 +134,7 @@ useHead({
             location based enterprise systems that address socio-economic
             challenges.
           </p>
-          <div class="flex-col md:flex mt-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 mt-5">
             <img src="~/assets/images/approach.jpg" class=" w-96 rounded" alt="">
             <div class="flex mx-auto items-center mt-5 md:mt-0">
               <ul class="">
