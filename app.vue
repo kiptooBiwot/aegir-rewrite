@@ -29,71 +29,71 @@ const locoScroll = ref()
 // })
 
 
-onMounted(() => {
-  // setTimeout(async () => {
-  console.log('MOUNTED ****************************')
-  // locoScroll.value = null
-  const scrollEl = document.querySelector('[data-scroll-container]')
+// onMounted(() => {
+//   // setTimeout(async () => {
+//   console.log('MOUNTED ****************************')
+//   // locoScroll.value = null
+//   const scrollEl = document.querySelector('[data-scroll-container]')
 
-  locoScroll.value = new $locomotiveScroll({
-    el: scrollEl,
-    smooth: true,
-    multiplier: 0.55,
-    offset: ['30%', 0],
-    lerp: 0.07,
-    reloadOnContextChange: true,
-    smartphone: {
-      breakpoint: 0,
-    },
-    // for tablet smooth
-    tablet: { smooth: true },
-    // for mobile
-    smartphone: { smooth: true }
-  })
+//   locoScroll.value = new $locomotiveScroll({
+//     el: scrollEl,
+//     smooth: true,
+//     multiplier: 0.55,
+//     offset: ['30%', 0],
+//     lerp: 0.07,
+//     reloadOnContextChange: true,
+//     smartphone: {
+//       breakpoint: 0,
+//     },
+//     // for tablet smooth
+//     tablet: { smooth: true },
+//     // for mobile
+//     smartphone: { smooth: true }
+//   })
 
-  locoScroll.value.on('scroll', ScrollTrigger.update)
-  // locoScroll.value.on('scroll', ScrollTrigger.refresh())
+//   locoScroll.value.on('scroll', ScrollTrigger.update)
+//   // locoScroll.value.on('scroll', ScrollTrigger.refresh())
 
-  // console.log('LOCOSCROLL OBJECT', locoScroll);
+//   // console.log('LOCOSCROLL OBJECT', locoScroll);
 
-  ScrollTrigger.scrollerProxy(locoScroll.value.el, {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.value.scrollTo(value, { duration: 0, disableLerp: true })
-        : locoScroll.value.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight
-      };
-    },
+//   ScrollTrigger.scrollerProxy(locoScroll.value.el, {
+//     scrollTop(value) {
+//       return arguments.length
+//         ? locoScroll.value.scrollTo(value, { duration: 0, disableLerp: true })
+//         : locoScroll.value.scroll.instance.scroll.y;
+//     },
+//     getBoundingClientRect() {
+//       return {
+//         top: 0,
+//         left: 0,
+//         width: window.innerWidth,
+//         height: window.innerHeight
+//       };
+//     },
 
-    pinType: locoScroll.value.el.style.transform
-      ? "transform"
-      : "fixed"
-  })
+//     pinType: locoScroll.value.el.style.transform
+//       ? "transform"
+//       : "fixed"
+//   })
 
-  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.value.update());
-  ScrollTrigger.refresh()
-  ScrollTrigger.defaults({ scroller: ".smooth-scroll" })
-
-
-  // });
-
-  // }, 100)
+//   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+//   ScrollTrigger.addEventListener("refresh", () => locoScroll.value.update());
+//   ScrollTrigger.refresh()
+//   ScrollTrigger.defaults({ scroller: ".smooth-scroll" })
 
 
-})
+//   // });
 
-onBeforeUnmount(() => {
-  console.log('*****************BEFORE UNMOUNT! **************************');
-  window.removeEventListener('resize', setVh)
+//   // }, 100)
 
-})
+
+// })
+
+// onBeforeUnmount(() => {
+//   console.log('*****************BEFORE UNMOUNT! **************************');
+//   window.removeEventListener('resize', setVh)
+
+// })
 
 </script>
 

@@ -73,18 +73,22 @@ const send = async () => {
   <div>
     <div class="w-full bg-[#f1f1e6] bg-[url('@/assets/images/map_aegir.png')] object-center py-5 relative">
       <div class="absolute inset-0 bg-[#0C3C60] bg-opacity-90 z-0"></div>
-      <div class="h-auto mx-auto max-w-5xl mt-[150px] z-10 mb-10">
+      <div class="h-auto mx-auto max-w-5xl mt-[150px] z-30 mb-10">
+        <!--  -->
         <h1 class="gs_reveal reveal_fromLeft pb-5 font-display text-4xl font-bold text-gray-200 ">Get In Touch
         </h1>
         <div class="mt-5 grid grid-cols-1 gap-10 md:grid-cols-3">
+          <!-- gs_reveal -->
           <div class="gs_reveal space-y-3 text-white pb-3 border-b">
             <h3 class="uppercase font-bold font-display text-gray-200">email address</h3>
             <p>info@aegirconsult.systems</p>
           </div>
+          <!-- gs_reveal -->
           <div class="gs_reveal space-y-3 text-white pb-3 border-b">
             <h3 class="uppercase font-bold font-display text-gray-200">phone number</h3>
             <p>+254-747-587-783</p>
           </div>
+          <!-- gs_reveal -->
           <div class="gs_reveal space-y-3 text-white pb-3 border-b">
             <h3 class="uppercase font-bold font-display text-gray-200">Physical address</h3>
             <!-- <p>P. O. BOX 650-00606</p> -->

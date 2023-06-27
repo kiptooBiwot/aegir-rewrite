@@ -82,7 +82,7 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <div id="menu_bg" class="absolute inset-0 w-full min-h-screen z-20 bg-[#0C3C60] py-20">
+    <div id="menu_bg" class="fixed inset-0 w-full min-h-screen z-20 bg-[#0C3C60] py-20">
       <!-- <NavBar /> -->
       <div id="menu_bg" class="fixed left-0 top-0 right-0 flex justify-between py-[48px] max-w-7xl items-center mx-auto">
         <NuxtLink to="/">
