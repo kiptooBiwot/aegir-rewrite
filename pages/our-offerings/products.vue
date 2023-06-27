@@ -81,7 +81,7 @@ const products = ref([
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
 
-    <div class="max-w-4xl mx-auto py-10 space-y-7 my-10">
+    <div class="max-w-4xl mx-auto py-10 space-y-7 my-10 pl-12 pr-7 md:px-0">
       <div>
         <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">What tech do you need?
         </h4>
@@ -99,7 +99,8 @@ const products = ref([
         <div class="image1-part inset-0 w-full md:w-1/2 h-full">
           <img class="object-cover object-center w-full h-80" src="@/assets/images/infrastructure.jpg" alt="">
         </div>
-        <div class="inset-0 w-full md:w-1/2 h-full justify-center text-center items-center space-y-5 p-2 md:p-10">
+        <div
+          class="inset-0 w-full md:w-1/2 h-full md:justify-center md:text-center items-center space-y-5 mt-5 md:mt-0 pl-12 pr-7 md:p-10">
           <h3 class="large-title1 font-display text-3xl font-bold text-gray-700">
             Infrastructure Location Intelligence Systems
           </h3>
@@ -114,7 +115,7 @@ const products = ref([
       </div>
       <div class="service-two md:flex w-full h-auto md:h-100">
         <div
-          class="w-full md:w-1/2 h-full justify-center space-y-5 text-center items-center p-2 md:p-10 order-2 md:order-2">
+          class="w-full md:w-1/2 h-full justify-center space-y-5 md:text-center items-center p-2 mt-5 md:mt-0 pl-12 pr-7 md:p-10 order-2 md:order-2">
           <h3 class="large-title2 font-display text-3xl font-bold text-gray-700">
             Content Management Intranet Portals
           </h3>
@@ -136,7 +137,8 @@ const products = ref([
         <div class="image3-part inset-0 w-full md:w-1/2 h-full">
           <img class="object-cover object center w-full h-100" src="@/assets/images/real_estate.jpg" alt="">
         </div>
-        <div class="w-full md:w-1/2 h-full justify-center space-y-5 text-center items-center p-2 md:p-10">
+        <div
+          class="w-full md:w-1/2 h-full justify-center space-y-5 md:text-center items-center mt-5 md:mt-0 pl-12 pr-7 md:p-10">
           <h3 class="large-title3 font-display text-3xl font-bold text-gray-700">
             Tenancy Management System
           </h3>
@@ -151,7 +153,7 @@ const products = ref([
       </div>
       <div class="service-four md:flex w-full h-auto md:h-100">
         <div
-          class="w-full md:w-1/2 h-full justify-center space-y-5 text-center items-center p-2 md:p-10 order-last md:order-1">
+          class="w-full md:w-1/2 h-full justify-center space-y-5 md:text-center items-center mt-5 md:mt-0 pl-12 pr-7 md:p-10 order-last md:order-1">
           <h3 class="large-title4 font-display text-3xl font-bold text-gray-700">
             Land Administration and Management System
           </h3>

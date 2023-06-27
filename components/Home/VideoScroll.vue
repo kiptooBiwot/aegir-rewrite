@@ -67,7 +67,7 @@ const services = ref([
             <p class="text-lg lg:text-xl mr-5 text-white font-bold">
               {{ index + 1 }} / {{ services.length }}.
             </p>
-            <h2 class="text-xl md:text-4xl lg:text-6xl pb-2 text-white font-medium">
+            <h2 class="text-3xl md:text-4xl lg:text-6xl pb-2 text-white font-medium">
               {{ service.title }}
             </h2>
           </div>

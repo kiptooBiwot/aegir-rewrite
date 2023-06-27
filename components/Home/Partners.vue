@@ -10,11 +10,13 @@ import ibm from '~/assets/images/partners/IBM_silver_partner.jpg'
 import microsoft from '~/assets/images/partners/Microsoft-logo.jpg'
 import ujumbe from '~/assets/images/partners/Ujumbe-Logo-01.png'
 import esri from '~/assets/images/partners/esri_partner_horizontal.png'
+import ms from '@/assets/images/partners/ms_logo.png'
 
 const partners = reactive([
   // { title: 'ATDI', logoImg: atdi },
   { title: 'IBM', logoImg: ibm },
   { title: 'Esri East Africa', logoImg: esri },
+  { title: 'Microsoft Partner', logoImg: ms },
   { title: 'Flotilla', logoImg: flotilla },
   { title: 'Cubic 3D', logoImg: cubic },
   // { title: 'Microsoft', logoImg: microsoft },
@@ -25,7 +27,7 @@ const partners = reactive([
 <template>
   <!-- PARTNERS  -->
   <section class="bg-[#f1faff]">
-    <div class="partners-section max-w-5xl mx-auto px-5 md:px-10 py-20">
+    <div class="partners-section max-w-5xl mx-auto pl-12 pr-7 md:px-10 py-20">
       <h3 class="partners-title gs_reveal text-3xl font-bold text-center font-display mb-10 text-gray-700">
         Our Business Partners
       </h3>

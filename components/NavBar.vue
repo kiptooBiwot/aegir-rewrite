@@ -12,13 +12,14 @@ const showHideMenu = () => {
 
 <template>
   <div class="shadow-sm w-full">
-    <div class="nav-bar fixed z-10 left-0 top-0 right-0 flex justify-between py-[48px] max-w-7xl items-center mx-auto">
+    <div
+      class="nav-bar fixed z-10 left-0 top-0 right-0 flex justify-between py-[48px] max-w-7xl px-3 md:px-0 items-center mx-auto">
       <NuxtLink to="/">
-        <div class="flex items-center gap-5">
+        <div class="flex items-center gap-2 md:gap-5">
           <div class="image-logo">
-            <img src="@/assets/images/aeigr_logo.png" alt="" class="w-10">
+            <img src="@/assets/images/aeigr_logo.png" alt="" class="w-8 md:w-10">
           </div>
-          <div v-if="!showMenu" class="text-logo font-bold text-3xl text-white font-display">
+          <div v-if="!showMenu" class="text-logo font-bold text-xl md:text-3xl text-white font-display">
             Aegir Consult
           </div>
         </div>
@@ -26,7 +27,7 @@ const showHideMenu = () => {
       <div class="flex gap-6 items-center">
         <NuxtLink to="/contact">
           <p
-            class="uppercase border-b-[0.5px] pb-2 text-sm text-white border-white font-medium font-display tracking-wide cursor-pointer hover:text-[#df9f1f] hover:scale-105 hover:border-[#df9f1f] transform duration-500 ease-in-out">
+            class="uppercase border-b-[0.5px] pb-2 text-xs md:text-sm text-white border-white font-medium font-display tracking-wide cursor-pointer hover:text-[#df9f1f] hover:scale-105 hover:border-[#df9f1f] transform duration-500 ease-in-out">
             Let's
             Talk</p>
         </NuxtLink>

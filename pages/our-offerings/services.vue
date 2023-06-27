@@ -44,7 +44,7 @@ const services = ref([
     <div class="w-full h-[350px] bg-[#f1f1e6] bg-[url('@/assets/images/services.jpg')] object-bottom py-5 relative">
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
-    <div class="max-w-3xl mx-auto mb-20">
+    <div class="max-w-3xl mx-auto mb-20 pl-12 pr-7 md:px-0">
       <div class="py-10">
         <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Our Offerings
         </h4>
