@@ -1,4 +1,10 @@
 <script setup>
+import { useFetch } from "nuxt/app"
+import gsap from 'gsap'
+
+definePageMeta({
+
+})
 
 const loading = ref(false)
 const sent = ref(false)
@@ -29,10 +35,38 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })
+
+
+// SEND Email to Server
+const send = async () => {
+  // this.$v.$touch()
+
+  if (!this.$v.$invalid) {
+    loading.value = true
+    // console.log(this.$mail.send)
+    const response = await $fetch('/mail/send', {
+      method: 'POST',
+      body: {
+        from: this.email,
+        name: this.name,
+        text: this.message,
+        quote: false
+      }
+    })
+
+    // console.log(response)
+
+    if (response) {
+      loading.value = false
+      sent.value = true
+      responseMessage.value = response.message
+    }
+  }
+}
 </script>
 
 <template>
@@ -89,6 +123,17 @@ useHead({
                   </button>
                 </div>
               </form>
+              <div v-if="sent">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto fill-green-500 w-24 h-24" viewBox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477
+        10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.997-4L6.76
+        11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.003 16z" />
+                </svg>
+                <p class="font-title text-lg font-medium text-center text-gray-500">
+                  {{ responseMessage }}
+                </p>
+              </div>
             </div>
           </div>
         </div>

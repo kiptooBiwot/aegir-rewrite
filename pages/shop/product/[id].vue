@@ -5,6 +5,10 @@ const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 
 const shopStore = useShopStore()
 const route = useRoute()
 
+definePageMeta({
+
+})
+
 const product = ref(null)
 const tab = ref(1)
 const quantity = ref(1)
@@ -44,7 +48,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class=" mb-10 bg-[url('@/assets/images/aeigr_cta.jpg')] shadow-md border">
+  <div class=" mb-10 bg-[url('@/assets/images/aeigr_cta.jpg')] shadow-md object-cover border">
     <div
       class="lg:flex lg:items-center max-w-6xl lg:justify-between w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
       <h2 class="text-3xl font-extrabold font-display text-gray-700 sm:text-4xl space-y-3">

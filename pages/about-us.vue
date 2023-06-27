@@ -1,4 +1,9 @@
 <script setup>
+import gsap from 'gsap'
+
+definePageMeta({
+
+})
 
 const values = ref([
   'Innovation',
@@ -35,11 +40,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })
-
 </script>
 
 <template>

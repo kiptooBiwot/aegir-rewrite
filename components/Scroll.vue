@@ -5,7 +5,8 @@
 <template>
   <div class="right-3 bottom-16 items-center h-auto fixed z-10 flex flex-col space-y-[100px]  text-gray-300 ">
     <div class="vertical-text transform text-xs ">
-      <slot></slot>
+      <!-- <slot></slot> -->
+      Welcome to Aeigr Consult
     </div>
     <div class="flex flex-col gap-20 justify-center ">
       <div class="animate-bounce transform duration-300 ease-in-out">

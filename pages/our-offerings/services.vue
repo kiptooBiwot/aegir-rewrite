@@ -1,5 +1,8 @@
 <script setup>
 
+definePageMeta({
+
+})
 
 const services = ref([
   {

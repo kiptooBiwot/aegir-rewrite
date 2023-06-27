@@ -1,5 +1,9 @@
 <script setup>
 
+definePageMeta({
+
+})
+
 useSeoMeta({
   title: 'Privacy Policy | Aegir Consult',
   description: 'We are a technology firm that deals in geo-informatics, information systems, system integration and geospatial technologies to both improve business efficacy and management operations',

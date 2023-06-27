@@ -82,7 +82,7 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <div id="menu_bg" class="absolute inset-0 w-full h-min-h-screen z-20 bg-[#0C3C60] py-20">
+    <div id="menu_bg" class="absolute inset-0 w-full min-h-screen z-20 bg-[#0C3C60] py-20">
       <!-- <NavBar /> -->
       <div id="menu_bg" class="fixed left-0 top-0 right-0 flex justify-between py-[48px] max-w-7xl items-center mx-auto">
         <NuxtLink to="/">
@@ -117,13 +117,13 @@ onUnmounted(() => {
                     : $emit('closeMenu'),
                 ]
                 ">
-              <div v-if="item.linkUrl" class="text-[42px] font-bold font-display">
+              <div v-if="item.linkUrl" class="text-[32px] font-bold font-display">
                 <NuxtLink :to="item.linkUrl">
                   {{ item.title }}
                 </NuxtLink>
               </div>
               <div v-else class="items-center">
-                <div class="flex items-center gap-10 text-[42px] font-bold font-display">
+                <div class="flex items-center gap-10 text-[32px] font-bold font-display">
                   <div>{{ item.title }}</div>
                   <button v-if="item.children" class="right-0 p-1">
                     <svg v-if="!subMenuIsVisible" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -139,7 +139,7 @@ onUnmounted(() => {
                 <div v-if="subMenuIsVisible" class="border-l border-gray-500 pl-10 ml-9 mt-8 space-y-3">
                   <ul v-if="item.children" class="space-y-2">
                     <li v-for="(child, index) in item.children" :key="index"
-                      class="hover:text-white text-lg md:text-[30px] font-bold py-1 md:py-2 transform duration-300 ease-in-out hover:translate-x-[10px]"
+                      class="hover:text-white text-lg md:text-[20px] font-bold py-1 md:py-2 transform duration-300 ease-in-out hover:translate-x-[10px]"
                       @click.prevent="$emit('closeMenu')">
                       <NuxtLink :to="child.linkUrl">
                         {{ child.title }}

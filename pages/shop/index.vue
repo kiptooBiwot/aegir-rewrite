@@ -5,6 +5,10 @@ import { onMounted } from "vue";
 
 const shopStore = useShopStore()
 
+definePageMeta({
+
+})
+
 onMounted(() => {
   shopStore.getProducts()
 })

@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // ssr: false,
   runtimeConfig: {
     // baseURL: process.env.NUXT_APP_BASE_URL || '/'
     public: {

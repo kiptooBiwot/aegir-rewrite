@@ -2,6 +2,10 @@
 import { onMounted } from 'vue'
 import { useShopStore } from '@/stores/shop'
 
+definePageMeta({
+
+})
+
 const shopStore = useShopStore()
 
 const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'KSH' })
@@ -37,7 +41,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })

@@ -1,15 +1,17 @@
 <script setup>
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
-// const { $locomotiveScroll } = useNuxtApp()
+const { $locomotiveScroll } = useNuxtApp()
 // Locomotive scroll
 // const scroll = new $locomotiveScroll()d
+
 
 gsap.registerPlugin(ScrollTrigger)
 
 definePageMeta({
-  title: 'Aegir Home Page'
+  // title: 'Aegir Home Page',
+
 })
 
 
@@ -18,9 +20,61 @@ const tl = ref()
 const ctx = ref()
 const mySkew = ref()
 const videoInfo = ref()
+let locoScroll = ref()
 
+const runSmoothScroll = () => {
+  locoScroll.value = new $locomotiveScroll({
+    el: document.querySelector('.smooth-scroll'),
+    smooth: true,
+    multiplier: 0.55,
+    offset: ['30%', 0],
+    lerp: 0.07,
+    reloadOnContextChange: true,
+    smartphone: {
+      breakpoint: 0,
+    },
+    // for tablet smooth
+    tablet: { smooth: true },
+    // for mobile
+    smartphone: { smooth: true }
+  })
+  console.log('LOCOSCROLL INDEX:', locoScroll.value);
+
+  new ResizeObserver(() => locoScroll.value.update()).observe(document.querySelector("[data-scroll-container]"))
+
+  locoScroll.value.on('scroll', ScrollTrigger.update)
+
+  ScrollTrigger.scrollerProxy('.smooth-scroll', {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.value.scrollTo(value, { duration: 0, disableLerp: true })
+        : locoScroll.value.scroll.instance.scroll.y
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      }
+    },
+    pinType: document.querySelector(".smooth-scroll").style.transform
+      ? "transform"
+      : "fixed",
+  })
+
+  ScrollTrigger.addEventListener('refresh', () => locoScroll.value.update())
+
+  ScrollTrigger.refresh()
+  new ResizeObserver(() => locoScroll.value.update()).observe(document.querySelector('[data-scroll-container]'))
+}
 
 onMounted(() => {
+  // runSmoothScroll()
+})
+
+onMounted(() => {
+
   ctx.value = gsap.context((self) => {
     const smallHeading = self.selector?.('.small-heading')
 
@@ -244,7 +298,8 @@ onMounted(() => {
 
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
+  // locoScroll.value.destroy()
   ctx.value.revert() // <- Easy Cleanup!
 })
 
@@ -270,7 +325,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })
@@ -281,10 +336,10 @@ useHead({
 <template>
   <!-- {{ $locomotiveScroll }} -->
   <!-- {{ $gscrollClass }} -->
-  <main id="home" class="GScroll mx-auto">
-    <scroll>
+  <main id="home" class="GScroll mx-auto bg-slate-100">
+    <!-- <scroll>
       Welcome to Aeigr Consult
-    </scroll>
+    </scroll> -->
     <div class="hero relative">
       <HomeHero />
     </div>

@@ -11,6 +11,10 @@ import tradewinds from '~/assets/images/protfolio/tradewinds.png'
 import ca from '~/assets/images/protfolio/CA_Logo.png'
 import safariCollection from '~/assets/images/protfolio/The-Safari-Collection.jpg'
 
+definePageMeta({
+
+})
+
 const portfolio = ref([
   {
     company: 'Communications Authority of Kenya',
@@ -187,7 +191,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })

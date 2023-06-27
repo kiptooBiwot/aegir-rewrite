@@ -1,5 +1,9 @@
 <script setup>
 
+definePageMeta({
+
+})
+
 import one from '../assets/images/news/CIO_100_2021.jpg'
 import two from '../assets/images/news/3d_mapping_2.jpg'
 import three from '../assets/images/news/ketraco_ilis_3.jpg'
@@ -123,7 +127,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })

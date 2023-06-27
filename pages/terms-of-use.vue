@@ -1,5 +1,9 @@
 <script setup>
 
+definePageMeta({
+
+})
+
 useSeoMeta({
   title: 'Terms of Use | Aegir Consult',
   description: 'We are a technology firm that deals in geo-informatics, information systems, system integration and geospatial technologies to both improve business efficacy and management operations',
@@ -21,7 +25,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })
