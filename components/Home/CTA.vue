@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class=" mb-10 bg-[url('@/assets/images/aeigr_cta.jpg')] shadow-md object-cover border">
+  <div class=" mb-10 bg-[url('@/assets/images/aeigr_cta.jpg')] shadow-md object-contain border">
     <div
-      class="lg:flex lg:items-center max-w-6xl lg:justify-between w-full mx-auto py-12 px-7 sm:px-12 lg:py-16 lg:px-8 z-20">
+      class="xl:flex xl:items-center space-y-5 max-w-6xl xl:justify-between w-full mx-auto py-12 px-7 sm:px-12 xl:py-16 xl:px-8 z-20">
       <h2 class="text-3xl font-extrabold font-display text-gray-700 sm:text-4xl space-y-3">
         <span class="gs_reveal reveal_fromLeft block max-w-3xl">
           Are you interested in any of our services?
@@ -19,7 +19,7 @@
           <NuxtLink to="/contact">
             <button type="button"
               class="py-4 px-6 uppercase  bg-[#df9f1f] hover:bg-[#c48e22]  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
-              Talk to Us
+              Get Started
             </button>
           </NuxtLink>
         </div>

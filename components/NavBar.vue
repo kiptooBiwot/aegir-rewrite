@@ -8,6 +8,20 @@ const showHideMenu = () => {
   showMenu.value = !showMenu.value
   // }, 0)
 }
+
+onMounted(() => {
+  const elementToHide = document.getElementById('hide-on-scroll')
+
+  window.addEventListener('scroll', function () {
+    const scrollPosition = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)
+
+    if (scrollPosition > 0.8) {
+      elementToHide.style.display = 'none'
+    } else {
+      elementToHide.style.display = ''
+    }
+  })
+})
 </script>
 
 <template>
@@ -26,7 +40,7 @@ const showHideMenu = () => {
       </NuxtLink>
       <div class="flex gap-6 items-center">
         <NuxtLink to="/contact">
-          <p
+          <p id="hide-on-scroll"
             class="uppercase border-b-[0.5px] pb-2 text-xs md:text-sm text-white border-white font-medium font-display tracking-wide cursor-pointer hover:text-[#df9f1f] hover:scale-105 hover:border-[#df9f1f] transform duration-500 ease-in-out">
             Let's
             Talk</p>

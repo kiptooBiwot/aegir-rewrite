@@ -16,13 +16,13 @@ const menuItems = reactive([
       <div class="md:flex md:justify-between">
         <div class="mb-16 md:mb-0">
           <NuxtLink to="/" class="flex items-center">
-            <img src="@/assets/images/aeigr_logo.png" class="h-8 mr-3" alt="FlowBite Logo" />
+            <!-- <img src="@/assets/images/aeigr_logo.png" class="h-8 mr-3" alt="FlowBite Logo" /> -->
             <span class="self-center text-2xl font-semibold whitespace-nowrap font-display text-white">Aegir
               Consult</span>
           </NuxtLink>
 
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3 md:space-y-0">
           <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
             <ul class="text-gray-400 font-medium">
