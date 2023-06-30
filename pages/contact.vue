@@ -136,7 +136,7 @@ const send = async () => {
             <div class="my-10 gs_reveal">
               <form v-if="!sent" action="POST" class="space-y-5">
                 <div class="space-y-2">
-                  <label for="firstName">Full Name</label>
+                  <label for="">Full Name</label>
                   <input class="w-full px-4 py-3 bg-gray-100"
                     :class="{ 'border-red-500 focus:border-red-500': v$.name.$error }" v-model="formData.name"
                     name="firstName" type="text" placeholder="Please enter your full name" @change="v$.name.$touch">
@@ -146,7 +146,7 @@ const send = async () => {
                   </span>
                 </div>
                 <div class="space-y-2">
-                  <label for="firstName">Email</label>
+                  <label for="">Email</label>
                   <input class="w-full px-4 py-3 bg-gray-100"
                     :class="{ 'border-red-500 focus:border-red-500': v$.myEmail.$error }" v-model="formData.myEmail"
                     name="firstName" type="text" placeholder="Please enter your email address"
@@ -158,13 +158,11 @@ const send = async () => {
                 </div>
                 <!-- <BaseInput v-model="name" :title="`Full Name`" />
                 <BaseInput v-model="email" :title="`Your Email Address`" /> -->
-                <div>
-                  <label for="">
-                    <p class="text-sm font-semibold">Message</p>
-                    <textarea id="" v-model="formData.message" class="w-full px-4 py-4 bg-gray-100 border border-gray-200"
-                      name="message" :class="{ 'border border-red-500 focus:border-red-500': v$.message.$error }"
-                      placeholder="Type in your message" cols="30" rows="6" />
-                  </label>
+                <div class="space-y-2">
+                  <label for="" class="font">Message </label>
+                  <textarea id="" v-model="formData.message" class="w-full px-4 py-4 bg-gray-100 border border-gray-200"
+                    name="message" :class="{ 'border border-red-500 focus:border-red-500': v$.message.$error }"
+                    placeholder="Type in your message" cols="30" rows="6" />
                   <span class="text-sm text-red-500" v-if="v$.message.$error">
                     {{ v$.message.$errors[0].$message }}
                   </span>
