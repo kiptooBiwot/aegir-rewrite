@@ -1,18 +1,40 @@
 <script setup>
 import { useFetch } from "nuxt/app"
 import gsap from 'gsap'
+import useBaseAPI from "../composables/baseApiUrl"
+import { useVuelidate } from '@vuelidate/core'
+import { required, alpha, email, minLength, helpers } from '@vuelidate/validators'
 
-definePageMeta({
-
-})
+const baseAPIURL = useBaseAPI()
 
 const loading = ref(false)
 const sent = ref(false)
 const responseMessage = ref('')
-const name = ref('')
-const email = ref('')
-const message = ref('')
 
+const formData = reactive({
+  name: '',
+  myEmail: '',
+  message: ''
+})
+
+const rules = computed(() => {
+  return {
+    name: {
+      required: helpers.withMessage('Please enter your full name', required),
+      // alpha: helpers.withMessage('A name must have no numbers', alpha),
+      minLength: minLength(3)
+    },
+    myEmail: {
+      required: helpers.withMessage('An email is requried', required),
+      email: helpers.withMessage('Invalid email format', email)
+    },
+    message: {
+      required: helpers.withMessage('A message is required', required)
+    },
+  }
+})
+
+const v$ = useVuelidate(rules, formData)
 
 useSeoMeta({
   title: 'Contact | Aegir Consult',
@@ -44,16 +66,18 @@ useHead({
 // SEND Email to Server
 const send = async () => {
   // this.$v.$touch()
+  v$.value.$validate()
 
-  if (!this.$v.$invalid) {
+  if (!v$.value.$error) {
     loading.value = true
     // console.log(this.$mail.send)
     const response = await $fetch('/mail/send', {
       method: 'POST',
+      baseURL: baseAPIURL.baseAPIURL,
       body: {
-        from: this.email,
-        name: this.name,
-        text: this.message,
+        from: formData.myEmail,
+        name: formData.name,
+        text: formData.message,
         quote: false
       }
     })
@@ -98,6 +122,7 @@ const send = async () => {
         </div>
       </div>
     </div>
+
     <div class="min-h-screen">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1250px] ml-auto">
         <div class="space-y-5 pl-12 pr-7 md:px-0">
@@ -110,14 +135,39 @@ const send = async () => {
             </p>
             <div class="my-10 gs_reveal">
               <form v-if="!sent" action="POST" class="space-y-5">
-                <BaseInput v-model="name" :title="`Full Name`" />
-                <BaseInput v-model="email" :title="`Your Email Address`" />
+                <div class="space-y-2">
+                  <label for="firstName">Full Name</label>
+                  <input class="w-full px-4 py-3 bg-gray-100"
+                    :class="{ 'border-red-500 focus:border-red-500': v$.name.$error }" v-model="formData.name"
+                    name="firstName" type="text" placeholder="Please enter your full name" @change="v$.name.$touch">
+
+                  <span class="text-sm text-red-500" v-if="v$.name.$error">
+                    {{ v$.name.$errors[0].$message }}
+                  </span>
+                </div>
+                <div class="space-y-2">
+                  <label for="firstName">Email</label>
+                  <input class="w-full px-4 py-3 bg-gray-100"
+                    :class="{ 'border-red-500 focus:border-red-500': v$.myEmail.$error }" v-model="formData.myEmail"
+                    name="firstName" type="text" placeholder="Please enter your email address"
+                    @change="v$.myEmail.$touch">
+
+                  <span class="text-sm text-red-500" v-if="v$.myEmail.$error">
+                    {{ v$.myEmail.$errors[0].$message }}
+                  </span>
+                </div>
+                <!-- <BaseInput v-model="name" :title="`Full Name`" />
+                <BaseInput v-model="email" :title="`Your Email Address`" /> -->
                 <div>
                   <label for="">
                     <p class="text-sm font-semibold">Message</p>
-                    <textarea id="" v-model="message" class="w-full border-none bg-gray-200 px-4 py-4" name="message"
+                    <textarea id="" v-model="formData.message" class="w-full px-4 py-4" name="message"
+                      :class="{ 'border border-red-500 focus:border-red-500': v$.message.$error }"
                       placeholder="Type in your message" cols="30" rows="6" />
                   </label>
+                  <span class="text-sm text-red-500" v-if="v$.message.$error">
+                    {{ v$.message.$errors[0].$message }}
+                  </span>
                 </div>
                 <div class="flex justify-between mt-6">
                   <button type="submit"
@@ -127,6 +177,10 @@ const send = async () => {
                   </button>
                 </div>
               </form>
+              <div v-if="loading"
+                class="absolute top-0 left-0 right-0 bottom-52 z-30 w-full h-full justify-center items-center">
+                <Spinner />
+              </div>
               <div v-if="sent">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto fill-green-500 w-24 h-24" viewBox="0 0 24 24">
                   <path fill="none" d="M0 0h24v24H0z" />
@@ -134,7 +188,7 @@ const send = async () => {
         10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.997-4L6.76
         11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.003 16z" />
                 </svg>
-                <p class="font-title text-lg font-medium text-center text-gray-500">
+                <p class="font-display text-lg font-medium text-center text-gray-500">
                   {{ responseMessage }}
                 </p>
               </div>

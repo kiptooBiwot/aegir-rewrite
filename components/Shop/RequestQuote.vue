@@ -1,41 +1,78 @@
 <script setup>
-// import usebaseAPIURL from "~/composables/apiBaseComposable.js"
+import { useVuelidate } from '@vuelidate/core'
+import { required, alpha, email, minLength, helpers } from '@vuelidate/validators'
+import useBaseAPI from '../../composables/baseApiUrl';
 
-// const baseAPIURL = usebaseAPIURL()
+const baseAPIURL = useBaseAPI()
 
 const loading = ref(false)
 const sent = ref(false)
 const responseMessage = ref('')
-const firstName = ref('')
-const lastName = ref('')
-const email = ref('')
-const phoneNumber = ref('')
-const service = ref('')
-const message = ref('')
+let formData = reactive({
+  firstName: '',
+  lastName: '',
+  myEmail: '',
+  phoneNumber: '',
+  service: '',
+  message: ''
+})
+
+const rules = computed(() => {
+  return {
+    firstName: {
+      required: helpers.withMessage('This field is required', required),
+      alpha: helpers.withMessage('A name must have no numbers', alpha),
+      minLength: minLength(3)
+    },
+    lastName: {
+      required: helpers.withMessage('This field is required', required),
+      alpha: helpers.withMessage('A name must have no numbers', alpha),
+      minLength: minLength(3)
+    },
+    myEmail: {
+      required: helpers.withMessage('This field is required', required),
+      email: helpers.withMessage('Invalid email format', email)
+    },
+    phoneNumber: {
+      required: helpers.withMessage('A phone number is required', required)
+    },
+    service: {
+      required: helpers.withMessage('Please choose a service', required)
+    },
+    message: {
+      required: helpers.withMessage('A message is required', required)
+    }
+  }
+})
+
+const v$ = useVuelidate(rules, formData)
 
 const send = async () => {
-  loading.value = true //         // console.log(this.$mail.send)
-  const response = await $fetch('/mail/send', {
-    method: 'POST',
-    baseURL: baseAPIURL.baseAPIURL,
-    headers: {
-      'Content-type': 'application/json'
-    },
-    body: {
-      from: email,
-      subject: service,
-      name: firstName + ' ' + lastName,
-      tel: phoneNumber,
-      service: service,
-      text: message,
-      quote: true
-    }
-  })
+  v$.value.$validate()
+  if (!v$.value.$error) {
+    loading.value = true //         // console.log(this.$mail.send)
+    const response = await $fetch('/mail/send', {
+      method: 'POST',
+      baseURL: baseAPIURL.baseAPIURL,
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: {
+        from: formData.myEmail,
+        subject: formData.service,
+        name: formData.firstName + ' ' + formData.lastName,
+        tel: formData.phoneNumber,
+        service: formData.service,
+        text: formData.message,
+        quote: true
+      }
+    })
 
-  if (response) {
-    loading.value = false
-    sent.value = true
-    responseMessage.value = response.message
+    if (response) {
+      loading.value = false
+      sent.value = true
+      responseMessage.value = response.message
+    }
   }
 }
 //   methods: {
@@ -69,38 +106,64 @@ const send = async () => {
 <template>
   <div>
     <div
-      class="shadow-md rounded-md relative bg-[#84a6d1] p-4 md:p-10 space-y-6 my-10 mx-auto w-[100%] md:w-[80%] lg:w-[60%]">
+      class="shadow-md rounded-md relative bg-blue-200 p-4 md:p-10 space-y-6 my-10 mx-auto w-[100%] md:w-[80%] lg:w-[60%]">
       <h3 v-if="!sent" class="font-bold text-3xl text-gray-600">
         Get a Quote
       </h3>
+
       <form v-if="!sent" action="" class="space-y-6">
         <div class="md:flex-col">
-          <BaseInput :title="`First name`" />
-          <BaseInput :title="`Last name`" />
-          <!-- <label for="first-name" class="text-xs">
-                                                  Frist name
-                                                  <input id="" v-model="firstName" type="text" name="first-time" placeholder="First Name" class="w-full">
-                                                </label>
-                                                <label for="last-name" class="text-xs md:ml-0">
-                                                  Last name
-                                                  <input id="" v-model="lastName" type="text" name="last-time" placeholder="Last Name" class="w-full">
-                                                </label> -->
+          <div class="space-y-2">
+            <label for="firstName">First Name</label>
+            <input class="w-full px-4 py-3 bg-gray-100"
+              :class="{ 'border-red-500 focus:border-red-500': v$.firstName.$error }" v-model="formData.firstName"
+              name="firstName" type="text" placeholder="Please enter your first name" @change="v$.firstName.$touch">
+
+            <span class="text-sm text-red-500" v-if="v$.firstName.$error">
+              {{ v$.firstName.$errors[0].$message }}
+            </span>
+          </div>
+          <div class="space-y-2">
+            <label for="firstName">Last Name</label>
+            <input class="w-full px-4 py-3 bg-gray-100"
+              :class="{ 'border-red-500 focus:border-red-500': v$.lastName.$error }" v-model="formData.lastName"
+              name="firstName" type="text" placeholder="Please enter your last name" @change="v$.lastName.$touch">
+
+            <span class="text-sm text-red-500" v-if="v$.lastName.$error">
+              {{ v$.lastName.$errors[0].$message }}
+            </span>
+          </div>
+          <!-- <BaseInput :title="`First name`" :v$="v$" /> -->
+          <!-- <BaseInput :title="`Last name`" :v$="v$" /> -->
         </div>
         <div class="md:flex-col">
-          <BaseInput :title="`Email`" />
-          <BaseInput :title="`Phone number`" />
-          <!-- <label for="first-name" class="text-xs">
-                                                  Email
-                                                  <input id="" v-model="email" type="email" name="email" placeholder="Email" class="w-full">
-                                                </label>
-                                                <label for="last-name" class="text-xs md:ml-0">
-                                                  Phone
-                                                  <input id="" v-model="phoneNumber" type="tel" name="phone" placeholder="Phone number" class="w-full">
-                                                </label> -->
+          <div class="space-y-2">
+            <label for="firstName">Email</label>
+            <input class="w-full px-4 py-3 bg-gray-100"
+              :class="{ 'border-red-500 focus:border-red-500': v$.myEmail.$error }" v-model="formData.myEmail"
+              name="firstName" type="text" placeholder="Please enter your email address" @change="v$.myEmail.$touch">
+
+            <span class="text-sm text-red-500" v-if="v$.myEmail.$error">
+              {{ v$.myEmail.$errors[0].$message }}
+            </span>
+          </div>
+          <div class="space-y-2">
+            <label for="firstName">Phone Number</label>
+            <input class="px-4 py-3 bg-gray-100 w-full"
+              :class="{ 'border-red-500 focus:border-red-500': v$.phoneNumber.$error }" v-model="formData.phoneNumber"
+              name="firstName" type="text" placeholder="Please enter your phone number" @change="v$.phoneNumber.$touch">
+
+            <span class="text-sm text-red-500" v-if="v$.phoneNumber.$error">
+              {{ v$.phoneNumber.$errors[0].$message }}
+            </span>
+          </div>
+          <!-- <BaseInput :title="`Email`" :v$="v$" /> -->
+          <!-- <BaseInput :title="`Phone number`" :v$="v$" /> -->
         </div>
         <div class="flex-col flex">
           <label for="service" class="text-sm font-semibold mb-2">Choose a service:</label>
-          <select id="" v-model="service" name="service">
+          <select id="" v-model="formData.service" name="service" :class="{ 'ring-red-500 border-red-500 focus:ring-red-500 focus:border-red-500': v$.service.$error }
+            " @change="v$.service.$touch()">
             <option value="">
               --Please choose a service --
             </option>
@@ -120,13 +183,21 @@ const send = async () => {
               Drone Digital Image Processing
             </option>
           </select>
+          <span class="text-sm text-red-500" v-if="v$.service.$error">
+            {{ v$.service.$errors[0].$message }}
+          </span>
         </div>
         <div class="flex flex-col">
           <label for="message" class="text-sm font-semibold mb-2">Message
           </label>
-          <textarea id="" v-model="message" name="message" cols="18" rows="8" class="border bg-gray-100 p-2" />
+          <textarea id="" v-model="formData.message" name="message" cols="18" rows="8" class="border bg-gray-100 p-2"
+            :class="{ 'border-red-500 focus:border-red-500': v$.message.$error }" />
+          <span class="text-sm text-red-500" v-if="v$.message.$error">
+            {{ v$.message.$errors[0].$message }}
+          </span>
         </div>
-        <button type="submit" class="rounded-lg py-4 text-white bg-[#df9f1f] hover:bg-[#d4a953] w-full" @click.prevent="">
+        <button type="submit" class="rounded-lg py-4 text-white bg-[#df9f1f] hover:bg-[#d4a953] w-full"
+          @click.prevent="send">
           Send
         </button>
       </form>
@@ -141,7 +212,7 @@ const send = async () => {
                                                           10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.997-4L6.76
                                                           11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.003 16z" />
         </svg>
-        <p class="font-title text-lg font-medium text-center text-gray-500">
+        <p class="font-display text-lg font-medium text-center text-gray-500">
           {{ responseMessage }}
         </p>
       </div>
