@@ -161,8 +161,8 @@ const send = async () => {
                 <div>
                   <label for="">
                     <p class="text-sm font-semibold">Message</p>
-                    <textarea id="" v-model="formData.message" class="w-full px-4 py-4" name="message"
-                      :class="{ 'border border-red-500 focus:border-red-500': v$.message.$error }"
+                    <textarea id="" v-model="formData.message" class="w-full px-4 py-4 bg-gray-100 border border-gray-200"
+                      name="message" :class="{ 'border border-red-500 focus:border-red-500': v$.message.$error }"
                       placeholder="Type in your message" cols="30" rows="6" />
                   </label>
                   <span class="text-sm text-red-500" v-if="v$.message.$error">
