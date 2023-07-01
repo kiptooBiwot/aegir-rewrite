@@ -27,7 +27,7 @@ onMounted(() => {
     // duration: 1,
     // scrub: 1,
     scrollTrigger: {
-      trigger: '.big-heading',
+      trigger: '.hide-logo',
       start: 'top 30%',
       end: 'top 0%',
       // duration: 2,
@@ -40,7 +40,7 @@ onMounted(() => {
     .to('.image-logo', {
       opacity: 0,
       scrollTrigger: {
-        trigger: '.big-heading',
+        trigger: '.hide-logo',
         start: 'top 30%',
         end: 'top 0%',
         // duration: 2,
@@ -132,7 +132,7 @@ const send = async () => {
       <div class="absolute inset-0 bg-[#0C3C60] bg-opacity-90 z-0">
         <div class="h-auto mx-auto pl-12 pr-7 md:px-0 max-w-5xl mt-[150px] z-50 mb-10">
           <!--  -->
-          <h1 class="gs_reveal reveal_fromLeft pb-5 font-display text-4xl font-bold text-gray-200 ">Get In Touch
+          <h1 class="gs_reveal reveal_fromLeft pb-5 font-display text-4xl font-bold text-gray-200 hide-logo">Get In Touch
           </h1>
           <div class="mt-5 grid grid-cols-1 gap-10 md:grid-cols-3">
             <!-- gs_reveal -->
