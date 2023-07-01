@@ -16,7 +16,7 @@ const menuItems = reactive([
       <div class="md:flex md:justify-between">
         <div class="mb-16 md:mb-0">
           <NuxtLink to="/" class="flex items-center">
-            <!-- <img src="@/assets/images/aeigr_logo.png" class="h-8 mr-3" alt="FlowBite Logo" /> -->
+            <img src="@/assets/images/aeigr_logo.png" class="h-8 mr-3" alt="FlowBite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap font-display text-white">Aegir
               Consult</span>
           </NuxtLink>

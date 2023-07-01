@@ -1,8 +1,5 @@
 <script setup>
-
-definePageMeta({
-
-})
+import gsap from 'gsap'
 
 import one from '../assets/images/news/CIO_100_2021.jpg'
 import two from '../assets/images/news/3d_mapping_2.jpg'
@@ -16,6 +13,39 @@ import nine from '../assets/images/news/GIS Day_9.jpg'
 import ten from '../assets/images/news/gis4R&D_10.jpg'
 import eleven from '../assets/images/news/esri_partner_group.png'
 import twelve from '../assets/images/news/twelve.jpeg'
+
+onMounted(() => {
+  // Hide Logo and Text on scroll
+  const tl = gsap.timeline()
+
+  tl.to('.text-logo', {
+    opacity: 0,
+    // y: '-100%',
+    // duration: 1,
+    // scrub: 1,
+    scrollTrigger: {
+      trigger: '.main-content',
+      start: 'top 30%',
+      end: 'top 0%',
+      // duration: 2,
+      ease: 'power2.inOut',
+      scrub: 1,
+      // markers: true
+    }
+
+  })
+    .to('.image-logo', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.main-content',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+      }
+    })
+})
 
 
 const activities = ref([
@@ -139,7 +169,7 @@ useHead({
       <img src="@/assets/images/news/news_2.jpg" alt="" class=" object-cover  h-[300px] w-full">
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
     </div>
-    <div class="max-w-6xl py-10 mx-auto px-7 md:px-0">
+    <div class="max-w-6xl py-10 mx-auto px-7 md:px-0 main-content">
       <div class="mb-10 md:mb-0">
         <h2 class="gs_reveal font-bold font-display text-gray-800 text-[54px]">
           News

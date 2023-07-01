@@ -19,6 +19,39 @@ const approaches = ref([
   'Maximum ROI',
 ])
 
+onMounted(() => {
+  // Hide Logo and Text on scroll
+  const tl = gsap.timeline()
+
+  tl.to('.text-logo', {
+    opacity: 0,
+    // y: '-100%',
+    // duration: 1,
+    // scrub: 1,
+    scrollTrigger: {
+      trigger: '.main-content',
+      start: 'top 30%',
+      end: 'top 0%',
+      // duration: 2,
+      ease: 'power2.inOut',
+      scrub: 1,
+      // markers: true
+    }
+
+  })
+    .to('.image-logo', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.main-content',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+      }
+    })
+})
+
 useSeoMeta({
   title: 'About Us | Aegir Consult',
   description: 'We are a technology firm that deals in geo-informatics, information systems, system integration and geospatial technologies to both improve business efficacy and management operations',
@@ -51,7 +84,7 @@ useHead({
     <div class="w-full h-[350px] bg-[#f1f1e6] bg-[url('@/assets/images/office_aeigr.jpg')] object-bottom py-5 relative">
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
-    <div class="min-h-screen">
+    <div class="min-h-screen main-content">
       <div class="bg-slate-100">
         <div class="max-w-[1200px] mx-auto pl-12 pr-7 md:px-0 py-16">
           <div class="max-w-4xl mx-auto">

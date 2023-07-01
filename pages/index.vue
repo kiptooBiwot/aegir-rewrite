@@ -118,40 +118,36 @@ onMounted(() => {
     // }, '<=0.5')
 
 
+    // Hide Logo and Text on scroll
     const tl1 = gsap.timeline()
 
-    // tl1.to('.text-logo, .image-logo', {
-    //   opacity: 0,
-    //   // y: '-100%',
-    //   // duration: 1,
-    //   // scrub: 1,
-    //   scrollTrigger: {
-    //     trigger: '.small-heading',
-    //     start: 'top 30%',
-    //     end: 'top 0%',
-    //     // duration: 2,
-    //     ease: 'power2.inOut',
-    //     scrub: 1,
-    //     // markers: true
-    //   }
+    tl1.to('.text-logo', {
+      opacity: 0,
+      // y: '-100%',
+      // duration: 1,
+      // scrub: 1,
+      scrollTrigger: {
+        trigger: '.small-heading',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+        // markers: true
+      }
 
-    // })
-    // .from('.image-logo', {
-    //   opacity: 0,
-    //   // y: '-100%',
-    //   // duration: 1,
-    //   // scrub: 1,
-    //   scrollTrigger: {
-    //     trigger: '.small-heading',
-    //     start: 'top 30%',
-    //     end: 'top 0%',
-    //     // duration: 2,
-    //     ease: 'power2.inOut',
-    //     scrub: 1,
-    //     // markers: true
-    //   }
-
-    // })
+    })
+      .to('.image-logo', {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: '.small-heading',
+          start: 'top 30%',
+          end: 'top 0%',
+          // duration: 2,
+          ease: 'power2.inOut',
+          scrub: 1,
+        }
+      })
 
     // ABOUT SECTION Animation
     // const tl2 = gsap.timeline()

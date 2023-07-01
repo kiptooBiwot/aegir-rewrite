@@ -1,7 +1,37 @@
 <script setup>
+import gsap from 'gsap'
 
-definePageMeta({
+onMounted(() => {
+  // Hide Logo and Text on scroll
+  const tl = gsap.timeline()
 
+  tl.to('.text-logo', {
+    opacity: 0,
+    // y: '-100%',
+    // duration: 1,
+    // scrub: 1,
+    scrollTrigger: {
+      trigger: '.main-content',
+      start: 'top 30%',
+      end: 'top 0%',
+      // duration: 2,
+      ease: 'power2.inOut',
+      scrub: 1,
+      // markers: true
+    }
+
+  })
+    .to('.image-logo', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.main-content',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+      }
+    })
 })
 
 const products = ref([
@@ -81,7 +111,7 @@ const products = ref([
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
 
-    <div class="max-w-4xl mx-auto py-10 space-y-7 my-10 pl-12 pr-7 md:px-0">
+    <div class="max-w-4xl mx-auto py-10 space-y-7 my-10 pl-12 pr-7 md:px-0 main-content">
       <div>
         <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">What tech do you need?
         </h4>

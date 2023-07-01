@@ -17,6 +17,39 @@ const formData = reactive({
   message: ''
 })
 
+onMounted(() => {
+  // Hide Logo and Text on scroll
+  const tl = gsap.timeline()
+
+  tl.to('.text-logo', {
+    opacity: 0,
+    // y: '-100%',
+    // duration: 1,
+    // scrub: 1,
+    scrollTrigger: {
+      trigger: '.big-heading',
+      start: 'top 30%',
+      end: 'top 0%',
+      // duration: 2,
+      ease: 'power2.inOut',
+      scrub: 1,
+      // markers: true
+    }
+
+  })
+    .to('.image-logo', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.big-heading',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+      }
+    })
+})
+
 const rules = computed(() => {
   return {
     name: {
@@ -95,29 +128,30 @@ const send = async () => {
 
 <template>
   <div class="">
-    <div class="w-full bg-[#f1f1e6] bg-[url('@/assets/images/map_aegir.png')] object-center py-5 relative">
-      <div class="absolute inset-0 bg-[#0C3C60] bg-opacity-90 z-0"></div>
-      <div class="h-auto mx-auto pl-12 pr-7 md:px-0 max-w-5xl mt-[150px] z-30 mb-10">
-        <!--  -->
-        <h1 class="gs_reveal reveal_fromLeft pb-5 font-display text-4xl font-bold text-gray-200 ">Get In Touch
-        </h1>
-        <div class="mt-5 grid grid-cols-1 gap-10 md:grid-cols-3">
-          <!-- gs_reveal -->
-          <div class="gs_reveal space-y-3 text-white pb-3 border-b">
-            <h3 class="uppercase font-bold font-display text-gray-200">email address</h3>
-            <p>info@aegirconsult.systems</p>
-          </div>
-          <!-- gs_reveal -->
-          <div class="gs_reveal space-y-3 text-white pb-3 border-b">
-            <h3 class="uppercase font-bold font-display text-gray-200">phone number</h3>
-            <p>+254-747-587-783</p>
-          </div>
-          <!-- gs_reveal -->
-          <div class="gs_reveal space-y-3 text-white pb-3 border-b">
-            <h3 class="uppercase font-bold font-display text-gray-200">Physical address</h3>
-            <!-- <p>P. O. BOX 650-00606</p> -->
-            <!-- <p>Nairobi, Kenya</p> -->
-            <p>The Address, 7th Floor <br> Muthangari Drive. Nairobi</p>
+    <div class="w-full h-[400px] bg-[#f1f1e6] bg-[url('@/assets/images/map_aegir.png')] object-center py-5 relative">
+      <div class="absolute inset-0 bg-[#0C3C60] bg-opacity-90 z-0">
+        <div class="h-auto mx-auto pl-12 pr-7 md:px-0 max-w-5xl mt-[150px] z-50 mb-10">
+          <!--  -->
+          <h1 class="gs_reveal reveal_fromLeft pb-5 font-display text-4xl font-bold text-gray-200 ">Get In Touch
+          </h1>
+          <div class="mt-5 grid grid-cols-1 gap-10 md:grid-cols-3">
+            <!-- gs_reveal -->
+            <div class="gs_reveal space-y-3 text-white pb-3 border-b">
+              <h3 class="uppercase font-bold font-display text-gray-200">email address</h3>
+              <p>info@aegirconsult.systems</p>
+            </div>
+            <!-- gs_reveal -->
+            <div class="gs_reveal space-y-3 text-white pb-3 border-b">
+              <h3 class="uppercase font-bold font-display text-gray-200">phone number</h3>
+              <p>+254-747-587-783</p>
+            </div>
+            <!-- gs_reveal -->
+            <div class="gs_reveal space-y-3 text-white pb-3 border-b">
+              <h3 class="uppercase font-bold font-display text-gray-200">Physical address</h3>
+              <!-- <p>P. O. BOX 650-00606</p> -->
+              <!-- <p>Nairobi, Kenya</p> -->
+              <p>The Address, 7th Floor <br> Muthangari Drive. Nairobi</p>
+            </div>
           </div>
         </div>
       </div>
@@ -127,7 +161,8 @@ const send = async () => {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1250px] ml-auto">
         <div class="space-y-5 pl-12 pr-7 md:px-0">
           <div class="pt-10">
-            <h2 class="gs_reveal reveal_fromLeft text-gray-800 font-bold text-[54px] font-display">Hi. Let's make your
+            <h2 class="gs_reveal reveal_fromLeft big-heading text-gray-800 font-bold text-[54px] font-display">Hi. Let's
+              make your
               project a reality.</h2>
             <p class="gs_reveal text-xl font-medium">Fill out the form below or
               <a href="mailto:info@aegirconsult.systems" target="_blank" class="text-[#df9f1f]">

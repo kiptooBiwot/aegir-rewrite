@@ -93,6 +93,7 @@ onMounted(() => {
 
       // console.log('PROXY: ', proxy);
 
+
       ScrollTrigger.create({
         trigger: item,
         start: '0 100%',
@@ -164,6 +165,37 @@ onMounted(() => {
   })
   // })
 
+  // Hide Logo and Text on scroll
+  const tl = gsap.timeline()
+
+  tl.to('.text-logo', {
+    opacity: 0,
+    // y: '-100%',
+    // duration: 1,
+    // scrub: 1,
+    scrollTrigger: {
+      trigger: '.main-content',
+      start: 'top 30%',
+      end: 'top 0%',
+      // duration: 2,
+      ease: 'power2.inOut',
+      scrub: 1,
+      // markers: true
+    }
+
+  })
+    .to('.image-logo', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.main-content',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+      }
+    })
+
 })
 
 onUnmounted(() => {
@@ -203,7 +235,7 @@ useHead({
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
 
-    <div class="max-w-4xl mx-auto mt-10 space-y-5 px-7 md:px-0">
+    <div class="max-w-4xl mx-auto mt-10 space-y-5 px-7 md:px-0 main-content">
       <div class="">
         <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Our Esteemed Partners
         </h4>

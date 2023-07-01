@@ -1,16 +1,44 @@
 <script setup>
-
+import gsap from 'gsap'
 import { useShopStore } from "@/stores/shop.js"
 import { onMounted } from "vue";
 
+
 const shopStore = useShopStore()
-
-definePageMeta({
-
-})
 
 onMounted(() => {
   shopStore.getProducts()
+
+  // Hide Logo and Text on scroll
+  const tl = gsap.timeline()
+
+  tl.to('.text-logo', {
+    opacity: 0,
+    // y: '-100%',
+    // duration: 1,
+    // scrub: 1,
+    scrollTrigger: {
+      trigger: '.main-content',
+      start: 'top 30%',
+      end: 'top 0%',
+      // duration: 2,
+      ease: 'power2.inOut',
+      scrub: 1,
+      // markers: true
+    }
+
+  })
+    .to('.image-logo', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.main-content',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+      }
+    })
 })
 
 
@@ -47,7 +75,7 @@ useHead({
       <img src="@/assets/images/cart.jpg" alt="" class=" h-[300px] w-full object-cover top-0 ">
     </div>
 
-    <div class=" max-w-6xl mx-auto py-10 h-auto">
+    <div class=" max-w-6xl mx-auto py-10 h-auto main-content">
       <div class="space-y-5">
         <h2 class="gs_reveal reveal_fromLeft text-5xl text-gray-700 font-display font-bold">Shop with Us.</h2>
         <p class="gs_reveal">Order online for a printed copy for your home, office or even home office.</p>

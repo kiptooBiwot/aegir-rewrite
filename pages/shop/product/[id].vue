@@ -1,4 +1,5 @@
 <script setup>
+import gsap from "gsap";
 import { useShopStore } from "@/stores/shop.js";
 const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'KES' })
 
@@ -17,6 +18,37 @@ onMounted(() => {
   const singleProduct = shopStore.products.filter((product) => product._id === route.params.id)
 
   product.value = singleProduct[0]
+
+  // Hide Logo and Text on scroll
+  const tl = gsap.timeline()
+
+  tl.to('.text-logo', {
+    opacity: 0,
+    // y: '-100%',
+    // duration: 1,
+    // scrub: 1,
+    scrollTrigger: {
+      trigger: '.main-content',
+      start: 'top 30%',
+      end: 'top 0%',
+      // duration: 2,
+      ease: 'power2.inOut',
+      scrub: 1,
+      // markers: true
+    }
+
+  })
+    .to('.image-logo', {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.main-content',
+        start: 'top 30%',
+        end: 'top 0%',
+        // duration: 2,
+        ease: 'power2.inOut',
+        scrub: 1,
+      }
+    })
 })
 
 const currentTab = (index) => {
@@ -58,7 +90,7 @@ useHead({
 <template>
   <div class="min-h-[1000px]">
     <div class="bg-[#0C3C60] h-[150px]"></div>
-    <div class="w-full max-w-5xl mx-auto text-gray-500">
+    <div class="w-full max-w-5xl mx-auto text-gray-500 main-content">
       <div v-if="product" class="md:flex gap-6 mx-8 md:mx-20 mt-10">
         <div class="w-full md:w-1/2">
           <img :src="product.imgUrl" class="inset-0 w-full h-full" alt="">
