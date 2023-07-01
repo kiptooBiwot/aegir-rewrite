@@ -1,7 +1,6 @@
 <script setup>
-import { PlusIcon } from '@heroicons/vue/24/solid';
+import { PlusIcon } from '@heroicons/vue/24/solid'
 
-// import {  } from "@/assets/images/aeigr";
 </script>
 
 <template>

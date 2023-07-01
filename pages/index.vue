@@ -110,48 +110,48 @@ onMounted(() => {
         stagger: 0.1,
         duration: 1
       }, '<')
-      .from('.hero-button', {
-        opacity: 0,
-        y: '100%',
-        ease: 'power2.inOut',
-        duration: 1
-      }, '<')
+    // .from('.hero-button', {
+    //   opacity: 0,
+    //   y: '100%',
+    //   ease: 'power2.inOut',
+    //   duration: 1
+    // }, '<=0.5')
 
 
     const tl1 = gsap.timeline()
 
-    tl1.to('.text-logo', {
-      opacity: 0,
-      // y: '-100%',
-      // duration: 1,
-      // scrub: 1,
-      scrollTrigger: {
-        trigger: '.small-heading',
-        start: 'top 30%',
-        end: 'top 0%',
-        // duration: 2,
-        ease: 'power2.inOut',
-        scrub: 1,
-        // markers: true
-      }
+    // tl1.to('.text-logo, .image-logo', {
+    //   opacity: 0,
+    //   // y: '-100%',
+    //   // duration: 1,
+    //   // scrub: 1,
+    //   scrollTrigger: {
+    //     trigger: '.small-heading',
+    //     start: 'top 30%',
+    //     end: 'top 0%',
+    //     // duration: 2,
+    //     ease: 'power2.inOut',
+    //     scrub: 1,
+    //     // markers: true
+    //   }
 
-    })
-      .from('.image-logo', {
-        opacity: 0,
-        // y: '-100%',
-        // duration: 1,
-        // scrub: 1,
-        scrollTrigger: {
-          trigger: '.small-heading',
-          start: 'top 30%',
-          end: 'top 0%',
-          // duration: 2,
-          ease: 'power2.inOut',
-          scrub: 1,
-          // markers: true
-        }
+    // })
+    // .from('.image-logo', {
+    //   opacity: 0,
+    //   // y: '-100%',
+    //   // duration: 1,
+    //   // scrub: 1,
+    //   scrollTrigger: {
+    //     trigger: '.small-heading',
+    //     start: 'top 30%',
+    //     end: 'top 0%',
+    //     // duration: 2,
+    //     ease: 'power2.inOut',
+    //     scrub: 1,
+    //     // markers: true
+    //   }
 
-      })
+    // })
 
     // ABOUT SECTION Animation
     // const tl2 = gsap.timeline()
