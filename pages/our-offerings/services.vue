@@ -74,7 +74,7 @@ const services = ref([
     <div class="w-full h-[350px] bg-[#f1f1e6] bg-[url('@/assets/images/services.jpg')] object-bottom py-5 relative">
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
-    <div class="max-w-3xl mx-auto mb-20 pl-12 pr-7 md:px-0 main-content">
+    <div class="max-w-3xl mx-auto mb-20 pl-7 pr-16 md:px-0 main-content">
       <div class="py-10">
         <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Our Offerings
         </h4>
@@ -92,14 +92,14 @@ const services = ref([
 
     <!-- SERVICES HERE! -->
     <div class="pb-10">
-      <div class="w-full h-auto px-6 md:px-20 -z-50">
+      <div class="w-full h-auto px-0 lg:px-20 -z-50">
         <div v-for="(service, index) in services" :key="index"
           class="services-section inset-0 md:flex w-full p-8 border-b last:border-b-0 mb-5">
-          <div class="large-number text-[110px] md:text-[180px] leading-none font-medium text-slate-300">
+          <div class="large-number text-[60px] md:text-[110px] lg:text-[180px] leading-none font-medium text-slate-300">
             0{{ index + 1 }}.
           </div>
           <div class="w-full h-full justify-center ml-2 space-y-6 items-center">
-            <h2 class="large-title font-display text-gray-700 text-5xl">
+            <h2 class="large-title font-display text-gray-700 text-3xl lg:text-5xl">
               {{ service.title }}
             </h2>
             <p class="main-text">

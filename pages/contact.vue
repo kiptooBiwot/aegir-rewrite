@@ -128,9 +128,10 @@ const send = async () => {
 
 <template>
   <div class="">
-    <div class="w-full h-[400px] bg-[#f1f1e6] bg-[url('@/assets/images/map_aegir.png')] object-center py-5 relative">
+    <div
+      class="w-full h-screen md:h-[400px] bg-[#f1f1e6] bg-[url('@/assets/images/map_aegir.png')] object-center py-10 relative">
       <div class="absolute inset-0 bg-[#0C3C60] bg-opacity-90 z-0">
-        <div class="h-auto mx-auto pl-12 pr-7 md:px-0 max-w-6xl mt-[150px] z-50 mb-10">
+        <div class="h-auto mx-auto pl-7 pr-16 md:pl-7 md:pr-16 lg:px-0 max-w-6xl mt-[150px] z-50 mb-10">
           <!--  -->
           <h1 class="gs_reveal reveal_fromLeft pb-5 font-display text-4xl font-bold text-gray-200 hide-logo">Get In Touch
           </h1>
@@ -202,8 +203,8 @@ const send = async () => {
     </div>
 
     <div class="min-h-screen">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1250px] ml-auto">
-        <div class="space-y-5 pl-12 pr-7 md:px-0">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-[1250px] ml-auto">
+        <div class="space-y-5 pl-7 pr-16 lg:pl-7 lg:pr-0">
           <div class="pt-10">
             <h2 class="gs_reveal reveal_fromLeft big-heading text-gray-800 font-bold text-[54px] font-display">Hi. Let's
               make your
@@ -272,7 +273,7 @@ const send = async () => {
             </div>
           </div>
         </div>
-        <div class="gs_reveal reveal_fromRight">
+        <div class="gs_reveal reveal_fromRight hidden lg:block">
           <img src="@/assets/images/aeigr_contact.jpg" alt="" class="w-full object-contain">
         </div>
       </div>

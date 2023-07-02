@@ -27,7 +27,7 @@ const partners = reactive([
 <template>
   <!-- PARTNERS  -->
   <section class="bg-[#f1faff]">
-    <div class="partners-section max-w-5xl mx-auto pl-12 pr-7 md:px-10 py-20">
+    <div class="partners-section max-w-5xl mx-auto pl-7 pr-16 md:px-16 py-20">
       <h3 class="partners-title gs_reveal text-3xl font-bold text-center font-display mb-10 text-gray-700">
         Our Business Partners
       </h3>

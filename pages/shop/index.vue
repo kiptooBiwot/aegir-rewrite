@@ -76,7 +76,7 @@ useHead({
     </div>
 
     <div class=" max-w-6xl mx-auto py-10 h-auto main-content">
-      <div class="space-y-5">
+      <div class="space-y-5 px-10 lg:px-0">
         <h2 class="gs_reveal reveal_fromLeft text-5xl text-gray-700 font-display font-bold">Shop with Us.</h2>
         <p class="gs_reveal">Order online for a printed copy for your home, office or even home office.</p>
       </div>

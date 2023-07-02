@@ -42,7 +42,7 @@ const digitalApproach = ref([
   <!-- bg-[#daf3ff] -->
   <section class="digital-section w-full min-h-screen  py-20">
     <div class="max-w-5xl space-y-10 mx-auto">
-      <div class="space-y-5 px-7 md:px-0">
+      <div class="space-y-5 pl-7 pr-12 lg:px-0">
         <h1 class="digital-text gs_reveal text-3xl font-display text-gray-800 font-bold">Why Choose a Digital First
           Approach?</h1>
         <p class="gs_reveal text-[18px]">Technology and innovation affords modern business a competitive edge to grow

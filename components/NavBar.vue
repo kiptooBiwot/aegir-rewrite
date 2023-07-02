@@ -27,7 +27,7 @@ onMounted(() => {
 <template>
   <div class="shadow-sm w-full">
     <div
-      class="nav-bar fixed z-10 left-0 top-0 right-0 flex justify-between py-[48px] max-w-7xl px-3 md:px-0 items-center mx-auto">
+      class="nav-bar fixed z-10 left-0 top-0 right-0 flex justify-between py-[48px] max-w-7xl px-7 lg:px-0 items-center mx-auto">
       <NuxtLink to="/">
         <div class="flex items-center gap-2 md:gap-5">
           <div class="image-logo">

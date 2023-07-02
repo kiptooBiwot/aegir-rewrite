@@ -86,14 +86,15 @@ useHead({
     </div>
     <div class="min-h-screen main-content">
       <div class="bg-slate-100">
-        <div class="max-w-[1200px] mx-auto pl-12 pr-7 md:px-0 py-16">
+        <div class="max-w-[1200px] mx-auto pl-7 pr-16 lg:px-0 py-16">
           <div class="max-w-4xl text-center mx-auto">
             <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Who
               we are
             </h4>
             <h1 class="font-display font-bold text-5xl">About Us</h1>
           </div>
-          <div class=" w-full h-auto md:mx-auto py-10 px-0 md:py-10 md:px-52 leading-loose space-y-2 md:space-y-6">
+          <div
+            class=" w-full h-auto md:mx-auto py-10 px-0 md:py-10 md:px-32 lg:px-52 leading-loose space-y-2 md:space-y-6">
             <p class="text-2xl font-display leading-relaxed font-semibold ">
               We are a technology firm that deals in geo-informatics,
               information systems, system integration and geospatial technologies to
@@ -117,7 +118,7 @@ useHead({
         </div>
       </div>
       <div class="max-w-6xl mx-auto py-10">
-        <div class="mt-10 pl-12 pr-7 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="mt-10 pl-7 pr-16 md:px-36 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div class="">
             <h3 class="font-display text-[#df9f1f] text-center font-bold text-3xl tracking-wider">
               The Vision
@@ -158,7 +159,7 @@ useHead({
         </div>
       </div>
       <div class="bg-slate-100 py-16 mt-16">
-        <div class="max-w-[1200px] pl-12 pr-7 mx-auto md:px-48 space-y-8">
+        <div class="max-w-[1200px] pl-7 pr-16 mx-auto md:px-48 space-y-8">
           <h3 class="text-[#df9f1f] font-display text-center font-bold text-3xl tracking-wider">
             Our Approach
           </h3>
@@ -167,8 +168,8 @@ useHead({
             location based enterprise systems that address socio-economic
             challenges.
           </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 mt-5">
-            <img src="~/assets/images/approach.jpg" class=" w-96 rounded-lg" alt="">
+          <div class="grid grid-cols-1 lg:grid-cols-2 mt-5">
+            <img src="~/assets/images/approach.jpg" class=" w-96 rounded-lg mx-auto lg:mx-0" alt="">
             <div class="flex mx-auto items-center mt-5 md:mt-0">
               <ul class="">
                 <div v-for="(approach, index) in approaches" :key="index" class="flex items-baseline gap-4 space-y-10">

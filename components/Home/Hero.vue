@@ -10,7 +10,7 @@ import { PlusIcon } from '@heroicons/vue/24/solid'
                         A
                       </div> -->
     <div
-      class="min-h-screen md:h-[100vh] w-full grid grid-cols-1 md:grid-cols-12 justify-center items-center pl-12 pr-0 md:px-20 py-[130px] md:py-0">
+      class="min-h-screen md:h-[100vh] w-full grid grid-cols-1 md:grid-cols-12 justify-center items-center pl-7 pr-16 md:px-20 py-[130px] md:py-0">
 
       <div class="hero-text col-span-7 md:p-10">
         <div class="pb-6">
@@ -19,7 +19,7 @@ import { PlusIcon } from '@heroicons/vue/24/solid'
         </div>
         <div class=" md:pl-10 space-y-8">
           <div>
-            <h1 class="large-heading font-display text-5xl md:text-7xl text-white font-bold md:font-extrabold">Developing
+            <h1 class="large-heading font-display text-6xl md:text-7xl text-white font-extrabold">Developing
               Innovative
               Solutions </h1>
           </div>

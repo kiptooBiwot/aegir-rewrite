@@ -13,7 +13,7 @@
     </div>
     <div class="max-w-5xl">
       <!-- <div class="px-5 md:px-16"> -->
-      <div class="text-white font-display font-bold space-y-5 text-[25px] md:text-4xl pl-12 pr-7 md:px-0">
+      <div class="text-white font-display font-bold space-y-5 text-[25px] md:text-4xl pl-7 pr-16 md:px-0">
         <div class="">
           <h3 class="gs_reveal reveal_fromLeft about-small-header text-lg text-[#df9f1f]">+ What we do</h3>
         </div>
@@ -23,7 +23,7 @@
           efficacy and management operations.
         </p>
       </div>
-      <div class="mt-5 md:mt-5 pl-12 md:pl-16">
+      <div class="mt-5 md:mt-5 pl-7">
         <NuxtLink to="about-us">
           <button
             class="border border-white px-5 py-2 md:px-6 md:py-3 text-white hover:text-[#df9f1f] hover:border-[#df9f1f]">

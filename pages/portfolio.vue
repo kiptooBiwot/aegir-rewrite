@@ -235,7 +235,7 @@ useHead({
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
 
-    <div class="max-w-4xl mx-auto mt-10 space-y-5 px-7 md:px-0 main-content">
+    <div class="max-w-4xl mx-auto mt-10 space-y-5 px-7 md:pl-7 md:pr-16 main-content">
       <div class="">
         <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Our Esteemed Partners
         </h4>
@@ -251,7 +251,7 @@ useHead({
     <div class="max-w-5xl py-10  mx-auto min-h-screen">
 
 
-      <div class="portfolio-section grid md:grid-cols-3 gap-5 mx-5 mt-10 -z-10">
+      <div class="portfolio-section grid md:grid-cols-2 lg:grid-cols-3 gap-5 ml-5 mr-16 mt-10 -z-10">
         <div v-for="(item, index) in portfolio" :key="index"
           class="card shadow-sm px-6 py-10 bg-white relative hover:-translate-y-3 transition duration-1000 ease-in-out hover:shadow-xl">
           <div class=" inset-0 absolute bg-[#213f9a] hover:opacity-90 space-y-4 opacity-0 transition duration-1000

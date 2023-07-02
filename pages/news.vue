@@ -169,7 +169,7 @@ useHead({
       <img src="@/assets/images/news/news_2.jpg" alt="" class=" object-cover  h-[300px] w-full">
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
     </div>
-    <div class="max-w-6xl py-10 mx-auto px-7 md:px-0 main-content">
+    <div class="max-w-6xl py-10 mx-auto pl-7 pr-16 xl:px-0 main-content">
       <div class="mb-10 md:mb-0">
         <h2 class="gs_reveal font-bold font-display text-gray-800 text-[54px]">
           News
@@ -182,13 +182,13 @@ useHead({
 
       <div>
         <div v-for="(activity, index) in activities" :key="index" class="panel my-auto">
-          <div class="h-screen w-full justify-center items-center grid grid-cols-1 md:grid-cols-12">
+          <div class="h-screen w-full justify-center items-center grid grid-cols-1 lg:grid-cols-12 md:my-8">
             <div class="col-span-8">
               <img :src="activity.image"
-                class="gs_reveal reveal_fromLeft object-fill w-full h-[250px] md:h-[500px]  border-[#df9f1f] border-4"
+                class="gs_reveal reveal_fromLeft object-fill w-full h-[250px] md:h-[350px] lg:h-[500px]  border-[#df9f1f] border-4"
                 alt="">
             </div>
-            <div class="gs_reveal reveal_fromRight px-1 col-span-4 items-center md:px-5 py-2 space-y-4 my-auto">
+            <div class="gs_reveal reveal_fromRight px-1 col-span-4 items-center md:px-5 py-2 space-y-8 my-auto">
               <h2 class="gs_reveal text-4xl font-display font-semibold text-gray-700">
                 {{ activity.title }}
               </h2>
