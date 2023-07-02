@@ -6,7 +6,7 @@ import cubic from '~/assets/images/partners/Cubic.png'
 // import eldama from '~/assets/images/partners/Eldama.png'
 import flotilla from '~/assets/images/partners/flotilla.png'
 // import ibm from '~/assets/images/partners/ibm-logo.png'
-import ibm from '~/assets/images/partners/IBM_silver_partner.jpg'
+import ibm from '~/assets/images/partners/IBM_silver_partner.png'
 import microsoft from '~/assets/images/partners/Microsoft-logo.jpg'
 import ujumbe from '~/assets/images/partners/Ujumbe-Logo-01.png'
 import esri from '~/assets/images/partners/esri_partner_horizontal.png'
@@ -18,7 +18,7 @@ const partners = reactive([
   { title: 'Esri East Africa', logoImg: esri },
   { title: 'Microsoft Partner', logoImg: ms },
   { title: 'Flotilla', logoImg: flotilla },
-  { title: 'Cubic 3D', logoImg: cubic },
+  // { title: 'Cubic 3D', logoImg: cubic },
   // { title: 'Microsoft', logoImg: microsoft },
   // { title: 'Ujumbe', logoImg: ujumbe },
 ])

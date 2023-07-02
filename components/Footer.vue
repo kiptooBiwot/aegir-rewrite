@@ -13,18 +13,17 @@ const menuItems = reactive([
 <template>
   <footer class="bg-gray-800 relative bottom-0 left-0 right-0 pt-10">
     <div class="mx-auto w-full max-w-screen-xl px-7 md:px-4 py-6 lg:py-8">
-      <div class="md:flex md:justify-between">
-        <div class="mb-16 md:mb-0">
+      <div class="md:flex">
+        <div class="mb-16 md:mb-0 md:mr-40">
           <NuxtLink to="/" class="flex items-center">
             <img src="@/assets/images/aeigr_logo.png" class="h-8 mr-3" alt="FlowBite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap font-display text-white">Aegir
               Consult</span>
           </NuxtLink>
-
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3 md:space-y-0">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3 md:space-y-0 md:justify-between">
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
+            <h2 class="mb-6 text-sm font-display font-semibold  uppercase text-white">Quick Links</h2>
             <ul class="text-gray-400 font-medium">
               <li v-for="(item, index) in menuItems" :key="index" class="mb-4">
                 <NuxtLink :to="item.link" class="hover:underline">{{ item.title }}</NuxtLink>
@@ -32,7 +31,7 @@ const menuItems = reactive([
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <h2 class="mb-6 text-sm font-display font-semibold uppercase text-white">Legal</h2>
             <ul class="text-gray-400 font-medium">
               <li class="mb-4">
                 <NuxtLink to="/privacy-policy" class="hover:underline">Privacy Policy</NuxtLink>
@@ -44,7 +43,7 @@ const menuItems = reactive([
           </div>
           <div class="text-gray-400 font-medium space-y-4">
             <div>
-              <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Address</h2>
+              <h2 class="mb-6 text-sm font-display font-semibold  uppercase text-white">Address</h2>
             </div>
             <div class="flex">
               <span class="my-auto mr-4">

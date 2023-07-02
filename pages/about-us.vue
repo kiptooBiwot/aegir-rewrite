@@ -87,7 +87,7 @@ useHead({
     <div class="min-h-screen main-content">
       <div class="bg-slate-100">
         <div class="max-w-[1200px] mx-auto pl-12 pr-7 md:px-0 py-16">
-          <div class="max-w-4xl mx-auto">
+          <div class="max-w-4xl text-center mx-auto">
             <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Who
               we are
             </h4>
@@ -122,7 +122,7 @@ useHead({
             <h3 class="font-display text-[#df9f1f] text-center font-bold text-3xl tracking-wider">
               The Vision
             </h3>
-            <p class="text-base mt-5 leading-relaxed text-gray-700">
+            <p class="text-base mt-5 text-center leading-relaxed text-gray-700">
               To provide world-class enterprise-ready solutions in management
               information system development and location intelligence services that
               enable organizations to maximize business decision support.
@@ -132,7 +132,7 @@ useHead({
             <h3 class="font-display text-[#df9f1f] text-center font-bold text-3xl tracking-wider">
               The Mission
             </h3>
-            <p class="text-base mt-5 leading-relaxed text-gray-700">
+            <p class="text-base mt-5 text-center leading-relaxed text-gray-700">
               To provide quality professional consulting services that both geo-enable
               and operationalize modern businesses with the aim of improving their
               business processes, work efficiency, system security, and reduction in
@@ -148,7 +148,7 @@ useHead({
               <ol class="">
                 <div v-for="(value, index) in values" :key="index" class="flex items-center gap-4">
                   <div class="text-gray-200 font-bold text-3xl font-display">
-                    0{{ index + 1 }}.
+                    <!-- 0{{ index + 1 }}. -->
                   </div>
                   <li class="text-base">{{ value }}</li>
                 </div>
@@ -162,13 +162,13 @@ useHead({
           <h3 class="text-[#df9f1f] font-display text-center font-bold text-3xl tracking-wider">
             Our Approach
           </h3>
-          <p>
+          <p class="text-center">
             We leverage our wide industry experience to deliver and innovate around
             location based enterprise systems that address socio-economic
             challenges.
           </p>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-5">
-            <img src="~/assets/images/approach.jpg" class=" w-96 rounded" alt="">
+            <img src="~/assets/images/approach.jpg" class=" w-96 rounded-lg" alt="">
             <div class="flex mx-auto items-center mt-5 md:mt-0">
               <ul class="">
                 <div v-for="(approach, index) in approaches" :key="index" class="flex items-baseline gap-4 space-y-10">
