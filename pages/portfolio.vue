@@ -10,6 +10,7 @@ import victoriaBank from '~/assets/images/protfolio/victoria_bank_logo.png'
 import tradewinds from '~/assets/images/protfolio/tradewinds.png'
 import ca from '~/assets/images/protfolio/CA_Logo.png'
 import safariCollection from '~/assets/images/protfolio/The-Safari-Collection.jpg'
+import tatuCity from '~/assets/images/protfolio/tatu-city.jpg'
 
 definePageMeta({
 
@@ -20,6 +21,11 @@ const portfolio = ref([
     company: 'Communications Authority of Kenya',
     service: 'Digital Trunked Radio Networks Framework Project',
     logoUrl: ca
+  },
+  {
+    company: 'Tatu City',
+    service: 'Performance 365 Implementation',
+    logoUrl: tatuCity
   },
   {
     company: 'Kenya Electricity Transmission Company',
