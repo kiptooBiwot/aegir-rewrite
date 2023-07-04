@@ -12,13 +12,13 @@ const subMenuIsVisible = ref(false)
 const services = ref([
   {
     title: 'Enterprise System Development',
-    linkUrl: '/our-offerings/services'
+    linkUrl: '/our-offerings/services/details/enterprise-system-development'
   },
-  { title: 'Location Intelligence', linkUrl: '/our-offerings/services' },
-  { title: 'Geo-Data Services', linkUrl: '/our-offerings/services' },
-  { title: 'Equipment Supply', linkUrl: '/our-offerings/services' },
-  { title: 'Systems Integration', linkUrl: '/our-offerings/services' },
-  { title: 'System Audit Services', linkUrl: '/our-offerings/services' }
+  { title: 'Location Intelligence', linkUrl: '/our-offerings/services/details/location-intelligence-services' },
+  { title: 'Geodata Services', linkUrl: '/our-offerings/services/details/geodata-services' },
+  { title: 'Equipment Supply', linkUrl: '/our-offerings/services/details/hardware-and-equipment-supply' },
+  { title: 'Enterprise System Integration', linkUrl: '/our-offerings/services/details/enterprise-system-integration' },
+  // { title: 'System Audit Services', linkUrl: '/our-offerings/services/details/' }
 ])
 const menuItems = ref([
   { title: 'Home', linkUrl: '/' },

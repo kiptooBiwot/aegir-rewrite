@@ -94,25 +94,35 @@ useHead({
             <h1 class="font-display font-bold text-5xl">About Us</h1>
           </div>
           <div
-            class=" w-full h-auto md:mx-auto py-10 px-0 md:py-10 md:px-32 lg:px-52 leading-loose space-y-2 md:space-y-6">
+            class=" w-full h-auto md:mx-auto py-10 px-0 md:py-10 md:px-32 lg:px-52 leading-loose space-y-2 md:space-y-6 text-center">
             <p class="text-2xl font-display leading-relaxed font-semibold ">
-              We are a technology firm that deals in geo-informatics,
-              information systems, system integration and geospatial technologies to
-              both improve business efficacy and management operations.
+              Welcome to Aegir Consult, your trusted technology partner in Nairobi, Kenya, and the Sub-Saharan region. We
+              specialize in cutting-edge geo-informatics, enterprise systems, systems integration, and hardware supply and
+              configuration. With an exceptional roster of experienced, dedicated and knowledgeable Team, we pride
+              ourselves on delivering tailor-made solutions that perfectly align with your unique business needs.
             </p>
             <p>
-              Our understanding is that technology is key driver for
-              business growth in organizations. The technology we deploy afford modern
-              businesses the right tools to manage their data, streamlines their
-              business processes making work more efficient and ensures business
-              growth through insights drawn from location intelligence.
+              At Aegir Consult, we understand that every industry has its own challenges and requirements. That's why we
+              take a client-centric approach, ensuring we thoroughly grasp your objectives and pain points before crafting
+              personalized solutions. Whether you're in the public sector, healthcare, agriculture, finance, or any other
+              industry, we always strive to create innovative and scalable solutions that drive success for your
+              organization.
             </p>
             <p>
-              We are resolved in taking the lead to promote sustainable development
-              while leveraging enterprise solutions that address modern business
-              needs. Our ultimate goal is to make businesses more productive,
-              enterprise-ready and ensure a fully digital business transformation
-              journey.
+              Our commitment to excellence runs deep, and we go the extra mile to ensure that the solutions we offer are
+              seamlessly integrated into your existing infrastructure. We believe that technology should empower, not
+              impede, and our streamlined approach to implementation guarantees minimal disruption and maximum impact.
+            </p>
+            <p>
+              Our portfolio is a testament to our dedication and the trust our clients place in us. We take immense pride
+              in enabling organizations like yours to thrive in an ever-evolving digital landscape.
+            </p>
+            <p>
+              Join hands with Aegir Consult and embark on a journey of innovation and growth. Together, we'll unlock the
+              full potential of technology to create a brighter future for your business.
+            </p>
+            <p>
+              Let's shape tomorrow, today!
             </p>
           </div>
         </div>
@@ -180,13 +190,12 @@ useHead({
                 </div>
               </ul>
             </div>
-          </div>
         </div>
       </div>
-
     </div>
+
   </div>
-</template>
+</div></template>
 
 
 <style scoped></style>

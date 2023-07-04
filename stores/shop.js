@@ -49,14 +49,14 @@ export const useShopStore = defineStore('shop', {
 
     addProductToCart({ product, quantity }) {
       try {
-        console.log('DATA TO BE ADDED TO THE CART: ', { product, quantity });
+        // console.log('DATA TO BE ADDED TO THE CART: ', { product, quantity });
         // Check if product exists in the cart aleady
 
         const productInCart = this.cart.find((item) => {
           item.product._id === product._id
         })
 
-        console.log('PRODUCT EXISTS: ', productInCart);
+        // console.log('PRODUCT EXISTS: ', productInCart);
         if (productInCart) {
 
           productInCart.quantity += quantity
