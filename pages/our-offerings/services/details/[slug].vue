@@ -84,8 +84,8 @@ onBeforeUnmount(() => {
 
             <div class="max-w-6xl mx-auto grid grid-cols-12 py-10  lg:gap-10 ">
               <div class="col-span-12 lg:col-span-5">
-                <img v-if="servicesStore.service[0].image"
-                  :src="`../../../../assets/images/services/${servicesStore.service[0].image}.jpg`" alt=""
+                <!-- :src="`../../../../assets/images/services/${servicesStore.service[0].image}.jpg`" -->
+                <img v-if="servicesStore.service[0].image" :src="servicesStore.service[0].image" alt=""
                   class="rounded-2xl h-full w-full object-cover">
               </div>
               <div class="col-span-12 lg:col-span-7">
