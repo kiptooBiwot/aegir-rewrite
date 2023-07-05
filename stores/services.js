@@ -6,6 +6,7 @@ export const useServicesStore = defineStore('service', {
       {
         slug: 'enterprise-system-development',
         title: 'Enterprise System Development',
+        image: 'coding_aegir',
         description:
           'We excel in Enterprise System Development, a core pillar of our service offerings. Our expertise lies in harnessing the power of leading technology partners such as Microsoft, ESRI, and IBM to create robust, scalable, and tailor-made solutions that streamline and elevate your organization\'s operations.',
         whatIs: 'Enterprise System Development refers to the process of creating and implementing comprehensive software applications that cater to the complex needs of modern businesses. These systems serve as a centralized hub, seamlessly integrating various departments and functions to optimize efficiency and decision-making.',
@@ -54,6 +55,7 @@ export const useServicesStore = defineStore('service', {
       {
         slug: 'location-intelligence-services',
         title: 'Location Intelligence Services',
+        image: 'location_intelligence',
         description:
           'At Aegir Consult, we specialize in providing cutting-edge Location Intelligence Services, leveraging the power of geospatial data to help organizations make informed decisions, gain competitive advantages, and unlock hidden insights. With our expertise in geo-informatics and state-of-the-art technology, we empower businesses in Kenya and across the Sub-Saharan region to harness the potential of location-based data for smarter and more strategic operations.',
         whatIs: 'Location Intelligence (LI) is the process of analyzing and interpreting geospatial data to gain valuable insights into business operations, customer behavior, market trends, and more. By visualizing data on interactive maps, businesses can derive meaningful patterns and correlations, enabling them to make well-informed decisions.',
@@ -102,6 +104,7 @@ export const useServicesStore = defineStore('service', {
       {
         slug: 'geodata-services',
         title: 'Geodata Services',
+        image: 'geo_data',
         description:
           'At Aegir Consult, we are at the forefront of providing comprehensive Geodata Services that unlock the potential of spatial information for businesses and organizations across the Sub-Saharan region. Our geospatial expertise combined with advanced technologies empowers you to harness the value of geodata, enabling better decision-making, enhanced operational efficiency, and a deeper understanding of your environment.',
         whatIs: 'Geodata, also known as spatial data or geographic data, refers to any information linked to specific locations on the Earth\'s surface.This data can encompass a wide range of attributes, including coordinates, addresses, boundaries, and physical characteristics.Geodata is invaluable for analyzing patterns, relationships, and trends across various domains.',
@@ -150,6 +153,7 @@ export const useServicesStore = defineStore('service', {
       {
         slug: 'hardware-and-equipment-supply',
         title: 'Hardware and Equipment Supply',
+        image: 'equipment_aegir',
         description:
           'At Aegir Consult, we take pride in being your trusted partner for Geospatial Hardware Equipment Supply, offering a diverse range of cutting-edge technologies from industry leaders like Trimble and Teltonika. We understand the critical role that reliable and high-quality hardware plays in geospatial applications, and our commitment to providing top-of-the-line equipment ensures that your projects operate with precision and efficiency.',
         whatIs: '',
@@ -202,6 +206,7 @@ export const useServicesStore = defineStore('service', {
       {
         slug: 'enterprise-system-integration',
         title: 'Enterprise System Integration',
+        image: 'sys_integration',
         description:
           'At Aegir Consult, we stand out as experts in Enterprise Systems Integration, a core differentiator that sets us apart from other tech companies. Our unparalleled proficiency in seamlessly connecting and harmonizing diverse software and hardware systems enables organizations in Sub-Saharan region to achieve unmatched operational efficiency, data visibility, and streamlined workflows.',
         whatIs: 'Enterprise Systems Integration involves the unification of various standalone software applications, databases, and hardware components within an organization\'s IT infrastructure.By establishing smooth communication and data exchange between these systems, businesses can break down information silos, improve collaboration, and enhance the overall functionality of their technology ecosystem.',
@@ -255,18 +260,13 @@ export const useServicesStore = defineStore('service', {
   actions: {
     async getOneService(slug) {
       try {
-
-        console.log('We are Hitting this on STATE')
         // const singleService = this.services.find((item) => {
         //   item.product._id === product._id
         // })
-        console.log('SLUG', slug);
 
         let filteredService = await this.services.find((item) =>
           item.slug === slug
         )
-
-        console.log('STATE SERVICE:', filteredService)
 
         if (filteredService) {
           this.service.push(filteredService)
