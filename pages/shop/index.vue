@@ -72,7 +72,7 @@ useHead({
 <template>
   <div class="min-h-[2300px]">
     <div class=" w-full h-[300px]">
-      <img src="@/assets/images/cart.jpg" alt="" class=" h-[300px] w-full object-cover top-0 ">
+      <img src="@/assets/images/shop_image.jpg" alt="" class=" h-[300px] w-full object-cover top-0 ">
     </div>
 
     <div class=" max-w-6xl mx-auto py-10 h-auto main-content">

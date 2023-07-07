@@ -55,7 +55,10 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <div class="w-full h-[350px] bg-[#f1f1e6] bg-[url('@/assets/images/services_new.jpg')] object-center py-5 relative">
+    <div class="w-full h-[350px] bg-[#f1f1e6] py-5 relative">
+      <img v-if="servicesStore.service[0]" :src="servicesStore.service[0].coverImg" alt=""
+        class="absolute inset-0 w-full h-full object-cover">
+      <div v-else>Loading....</div>
       <div class="absolute inset-0 bg-[#000] bg-opacity-20 z-0"></div>
     </div>
 
@@ -129,7 +132,7 @@ onBeforeUnmount(() => {
             </div>
 
             <div class="py-10">
-              <p class="text-xl leading-relaxed font-medium">
+              <p class="text-xl text-justify font-medium">
                 {{ servicesStore.service[0].extra }}
               </p>
             </div>

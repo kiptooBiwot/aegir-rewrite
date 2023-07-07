@@ -88,9 +88,9 @@ useHead({
       <div class="bg-slate-100">
         <div class="max-w-[1200px] mx-auto pl-7 pr-16 lg:px-0 py-16">
           <div class="max-w-4xl text-center mx-auto">
-            <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Who
+            <!-- <h4 class=" small-heading uppercase font-display tracking-widest text-[#df9f1f] font-bold">Who
               we are
-            </h4>
+            </h4> -->
             <h1 class="font-display font-bold text-5xl">About Us</h1>
           </div>
           <div
@@ -190,12 +190,13 @@ useHead({
                 </div>
               </ul>
             </div>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
-</div></template>
+</template>
 
 
 <style scoped></style>
