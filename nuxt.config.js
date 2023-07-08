@@ -91,29 +91,6 @@ export default defineNuxtConfig({
         ],
       },
 
-      // The milliseconds from now until expiry of the cookies that are being set by this module.
-      cookieExpiryOffsetMs: 1000 * 60 * 60 * 24 * 365, // one year
-
-      // Names for the cookies that are being set by this module.
-      cookieNameIsConsentGiven: 'ncc_c',
-      cookieNameCookiesEnabledIds: 'ncc_e',
-
-      // Switch to toggle the button that opens the configuration modal.
-      isControlButtonEnabled: true,
-
-      text: {
-        locale: {
-          en: {
-            barTitle: 'Cookies Different',
-            barDescription: 'We use our own cookies and third-party...',
-          },
-        },
-
-        //this will override locale text
-        barTitle: 'Override Title'
-      }
-
-
     }]
   ],
 

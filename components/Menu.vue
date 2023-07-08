@@ -103,14 +103,15 @@ onUnmounted(() => {
             class="w-6 h-6 text-black rotate-180 hover:scale-125 hover:text-[#df9f1f] transform duration-700 ease-in-out" />
         </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto text-white min-h-screen py-5 md:pl-20 mt-7 md:mt-0">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto text-white min-h-screen md:py-5 md:pl-20 mt-7 md:mt-0">
         <div class="space-y-1 md:space-y-5">
           <h4 class="uppercase font-bold font-display text-title text-xs md:text-sm text-[#df9f1f]">
             Menu
           </h4>
           <ul class="">
             <li id="menu_items" v-for="(item, i) in menuItems" :key="i"
-              class="hover:text-white text-lg md:text-2xl font-bold py-1 md:py-4 transform duration-500 ease-in-out md:hover:translate-x-[50px] hover:translate-x-[25px]"
+              class="hover:text-white text-2xl md:text-3xl font-bold py-2 md:py-3 transform duration-500 ease-in-out md:hover:translate-x-[50px] hover:translate-x-[25px]"
               @click.prevent="
                 [
                   item.linkUrl == ''
@@ -153,23 +154,23 @@ onUnmounted(() => {
             </li>
           </ul>
         </div>
-        <div>
-          <div class="space-y-1 md:space-y-5">
-            <h4 class="uppercase font-bold font-display text-title text-xs text-[#df9f1f] md:text-sm">
-              Our Services
-            </h4>
-            <ul class="space-y-1 md:space-y-4">
-              <li id="services" v-for="(service, i) in services" :key="i"
-                class="text-base md:text-2xl font-bold hover:text-white items-center transform duration-500 ease-in-out hover:translate-x-[20px]"
-                @click.prevent="$emit('closeMenu')">
-                <nuxt-link :to="service.linkUrl">
-                  <span class="text-lg md:text-4xl opacity-30 text-bold mr-4">0{{ i + 1 }}. </span>
-                  {{ service.title }}
-                </nuxt-link>
-              </li>
-            </ul>
-          </div>
+        <!-- <div> -->
+        <div class="space-y-3 mt-10 md:mt-0 md:space-y-5">
+          <h4 class="uppercase font-bold font-display text-title text-xs text-[#df9f1f] md:text-sm">
+            Our Services
+          </h4>
+          <ul class="space-y-3 md:space-y-4">
+            <li id="services" v-for="(service, i) in services" :key="i"
+              class="text-lg md:text-2xl font-bold hover:text-white items-center transform duration-500 ease-in-out hover:translate-x-[20px]"
+              @click.prevent="$emit('closeMenu')">
+              <nuxt-link :to="service.linkUrl">
+                <span class="text-lg md:text-4xl opacity-30 text-bold mr-4">0{{ i + 1 }}. </span>
+                {{ service.title }}
+              </nuxt-link>
+            </li>
+          </ul>
         </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>

@@ -19,8 +19,8 @@
         </div>
         <p class="about-large-header gs_reveal pl-0 md:pl-16 leading-[1.4] ">
           We are a technology firm that deals in
-          geo-informatics, information systems, system integration and geospatial technologies to improve both business
-          efficacy and management operations.
+          geo-informatics, information systems, system integration and geospatial technologies to improve business
+          efficacy and operations management.
         </p>
       </div>
       <div class="mt-5 md:mt-5 pl-7">
