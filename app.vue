@@ -9,6 +9,18 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 const locoScroll = ref()
 
+const title = ref('Aegir Consult Limited')
+const description = ref('We are a technology firm that deals in geo - informatics, information systems, system integration and geospatial technologies to improve business efficacy and operations management.')
+
+// This will be reactive even you change title/description above
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+
 // Cookie Control
 const {
   cookiesEnabled,
