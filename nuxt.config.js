@@ -7,6 +7,15 @@ export default defineNuxtConfig({
       BASE_API: process.env.BASE_URL
     }
   },
+  head() {
+    return {
+      meta: [{
+        hid: 'Aegir Consult Limited',
+        property: 'Developing Innovative Solutions',
+        content: 'Your trusted technology partner in Nairobi, Kenya, and the Sub-Saharan region. We specialize in cutting-edge geo-informatics, enterprise systems, systems integration, and hardware supply and configuration. With an exceptional roster of experienced, dedicated and knowledgeable Team, we pride ourselves on delivering tailor-made solutions that perfectly align with your unique business needs. '
+      }]
+    }
+  },
 
   modules: [
     '@nuxtjs/tailwindcss',
