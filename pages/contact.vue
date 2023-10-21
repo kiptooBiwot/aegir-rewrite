@@ -144,7 +144,7 @@ const send = async () => {
             <!-- gs_reveal -->
             <div class="gs_reveal space-y-3 text-white pb-3 border-b">
               <h3 class="uppercase font-bold font-display text-gray-200">phone number</h3>
-              <p>+254-747-587-783</p>
+              <p>+254-110-681-999</p>
             </div>
             <!-- gs_reveal -->
             <div class="gs_reveal space-y-3 text-white pb-3 border-b">
