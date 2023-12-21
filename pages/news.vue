@@ -72,7 +72,7 @@ useHead({
 })
 
 const yearButtons = newsStore.yearButtons
-const selectedYearIndex = newsStore.selectedYearIndex
+// const selectedYearIndex = newsStore.selectedYearIndex
 const selectedActivities = newsStore.selectedActivities
 
 
@@ -103,7 +103,7 @@ const newsModal = newsStore.newsModal
         <template v-for="(button, index) in yearButtons" :key="index">
           <div type="button"
             class="px-3 py-1.5 text-sm md:text-base md:px-3 md:py-1.5 rounded-3xl border-[#0C3C60] bg-[#0C3C60] cursor-pointer text-white transition duration-300 ease-in-out hover:bg-[#2698f0] hover:text-gray-100 hover:shadow-lg hover:scale-105"
-            :class="[selectedYearIndex === index ? 'bg-[#2698f0] text-gray-100 shadow-lg' : '']"
+            :class="[newsStore.selectedYearIndex === index ? 'bg-[#2698f0] text-gray-100 shadow-lg' : '']"
             @click="newsStore.getYearNews(index, button.value)">
             {{ button.title }}
           </div>
