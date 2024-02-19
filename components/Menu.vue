@@ -35,6 +35,7 @@ const menuItems = ref([
   { title: 'Portfolio', linkUrl: '/portfolio' },
   { title: 'News', linkUrl: '/news' },
   { title: 'Shop', linkUrl: '/shop' },
+  { title: 'Schedule a Session', linkUrl: '/bookings' },
   { title: 'Contact', linkUrl: '/contact' }
   // { title: '' }
 ])
