@@ -42,7 +42,7 @@ onMounted(() => {
         <NuxtLink to="/bookings">
           <p id="hide-on-scroll"
             class="uppercase border-b-[0.5px] pb-2 text-xs md:text-sm text-white border-white font-medium font-display tracking-wide cursor-pointer hover:text-[#df9f1f] hover:scale-105 hover:border-[#df9f1f] transform duration-500 ease-in-out">
-            Book Our Services
+            Book A Demo
           </p>
         </NuxtLink>
         <!-- <div class="rounded-full bg-white w-10 h-10 relative flex items-center justify-center" @click="showHideMenu()">
