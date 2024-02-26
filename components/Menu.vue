@@ -36,6 +36,7 @@ const menuItems = ref([
   { title: 'News', linkUrl: '/news' },
   { title: 'Shop', linkUrl: '/shop' },
   { title: 'Book a Demo', linkUrl: '/bookings' },
+  { title: 'Our Blogs', linkUrl: '/blogs' },
   { title: 'Contact', linkUrl: '/contact' }
   // { title: '' }
 ])
@@ -112,7 +113,7 @@ onUnmounted(() => {
           </h4>
           <ul class="">
             <li id="menu_items" v-for="(item, i) in menuItems" :key="i"
-              class="hover:text-white text-2xl md:text-3xl font-bold py-2 md:py-3 transform duration-500 ease-in-out md:hover:translate-x-[50px] hover:translate-x-[25px]"
+              class="hover:text-white text-2xl md:text-2xl font-bold py-2 md:py-3 transform duration-500 ease-in-out md:hover:translate-x-[50px] hover:translate-x-[25px]"
               @click.prevent="
                 [
                   item.linkUrl == ''
