@@ -30,8 +30,20 @@ onUnmounted(() => {
           {{ newsStore.activityDetails.title }}
         </h2>
 
-        <img :src="newsStore.activityDetails.image" alt="" class="w-auto mx-auto object-cover rounded-xl">
-        <div v-html="newsStore.activityDetails.description" class="text-details"></div>
+
+        <div v-if="newsStore.activityDetails.fileType === 'pdf'">
+          <img :src="newsStore.activityDetails.image" alt="" class="w-[200px] mx-auto object-contain rounded-xl">
+          <div v-html="newsStore.activityDetails.description" class="text-details"></div>
+          <div class="flex items-center gap-5 mt-5">
+            <img :src="newsStore.activityDetails.image" class="w-10 object-contain" alt="">
+            <a href="../../assets/images/news/PR_1_ESRI_EPC.pdf" class="text-lg underline hover:shadow-md">Download the
+              Press Release</a>
+          </div>
+        </div>
+        <div v-else>
+          <img :src="newsStore.activityDetails.image" alt="" class="w-auto mx-auto object-cover rounded-xl">
+          <div v-html="newsStore.activityDetails.description" class="text-details"></div>
+        </div>
       </div>
       <div v-else>
         <Spinner />
