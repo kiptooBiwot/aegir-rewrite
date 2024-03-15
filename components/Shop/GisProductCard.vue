@@ -5,7 +5,8 @@ const props = defineProps(['products'])
 
 <template>
   <div class="flex flex-wrap -mx-4">
-    <div v-for="(product, index) in products" :key="index" class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+    <div v-for="(product, index) in products" :key="index"
+      class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 flex items-stretch">
       <div
         class="gs_reveal reveal_fromRight product-card block bg-white shadow-md hover:shadow-xl hover:scale-105 transition duration-700 ease-in-out rounded overflow-hidden cursor-pointer">
         <NuxtLink :to="product.url" target="_blank">

@@ -100,7 +100,7 @@ const esriLinks = [
       <div class="space-y-5 px-10 lg:px-0">
         <h2 class="gs_reveal reveal_fromLeft text-5xl text-gray-700 font-display font-bold">Shop with Us.</h2>
 
-        <h3>Our GIS Products</h3>
+        <h3 class="font-bold text-xl">Our GeoTech Solutions</h3>
         <div class="gap-3 my-10 mx-12 md:mx-14 lg:mx-20 ">
           <div class="w-full">
             <ShopGisProductCard :products="esriLinks" />
