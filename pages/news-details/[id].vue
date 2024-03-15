@@ -34,6 +34,12 @@ onUnmounted(() => {
         <div v-if="newsStore.activityDetails.fileType === 'pdf'">
           <img :src="newsStore.activityDetails.image" alt="" class="w-[200px] mx-auto object-contain rounded-xl">
           <div v-html="newsStore.activityDetails.description" class="text-details"></div>
+
+          <!-- <div class="my-10">
+            <a href="https://www.esri.com/about/newsroom/announcements/esri-recognizes-partners-for-innovation-and-excellence-4/"
+              class="text-lg underline hover:to-blue-600">Awards Granted for Exceptional Achievement Using GIS at Esri
+              Partner Conference </a>
+          </div> -->
           <div class="flex items-center gap-5 mt-5">
             <img :src="newsStore.activityDetails.image" class="w-10 object-contain" alt="">
             <a href="../../assets/images/news/PR_1_ESRI_EPC.pdf" class="text-lg underline hover:shadow-md">Download the
