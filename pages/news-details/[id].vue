@@ -42,7 +42,7 @@ onUnmounted(() => {
           </div> -->
           <div class="flex items-center gap-5 mt-5">
             <img :src="newsStore.activityDetails.image" class="w-10 object-contain" alt="">
-            <a href="../../assets/images/news/PR_1_ESRI_EPC.pdf" class="text-lg underline hover:shadow-md">Download the
+            <a href="https://shorturl.at/bdlu3" class="text-lg underline hover:shadow-md">Download the
               Press Release</a>
           </div>
         </div>

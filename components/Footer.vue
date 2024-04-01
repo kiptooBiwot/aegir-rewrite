@@ -36,6 +36,9 @@ const menuItems = reactive([
               <li class="mb-4">
                 <NuxtLink to="/privacy-policy" class="hover:underline">Privacy Policy</NuxtLink>
               </li>
+              <li class="mb-4">
+                <NuxtLink to="/code-of-conduct" class="hover:underline">Code of Conduct</NuxtLink>
+              </li>
               <li>
                 <NuxtLink to="/terms-of-use" class="hover:underline">Terms &amp; Conditions</NuxtLink>
               </li>
@@ -112,7 +115,8 @@ const menuItems = reactive([
             </svg>
           </a>
           <a href="tel:+254110681999" target="_blank" class="text-gray-500 hover:text-white">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
@@ -120,7 +124,8 @@ const menuItems = reactive([
           <a href="mailto:info@aegirconsult.systems" target="_blank" class="text-gray-500 hover:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
               <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
             </svg>
           </a>
 
