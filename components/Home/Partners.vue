@@ -23,7 +23,7 @@ const partners = reactive([
   { title: 'AFRALTI', logoImg: afralti },
   // { title: 'Cubic 3D', logoImg: cubic1 },
   { title: "Africa's Talking", logoImg: africas_talking },
-  { title: 'Cubic 3D', logoImg: cubic },
+  // { title: 'Cubic 3D', logoImg: cubic },
   // { title: 'Microsoft', logoImg: microsoft },
   // { title: 'Ujumbe', logoImg: ujumbe },
 ])
