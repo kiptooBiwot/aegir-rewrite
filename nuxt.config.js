@@ -112,7 +112,7 @@ export default defineNuxtConfig({
   },
 
   buildModules: [
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
   ],
 
   css: [
@@ -122,6 +122,12 @@ export default defineNuxtConfig({
 
   build: {
     transpile: ['gsap'],
+  },
+
+  runtimeConfig: {
+    public: {
+      gtagId: 'G-MCWN9S0043',
+    }
   },
 
   devtools: {
