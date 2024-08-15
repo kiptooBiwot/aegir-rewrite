@@ -80,7 +80,7 @@ const menuItems = reactive([
               </span>
               info@aegirconsult.systems
             </div>
-            <div class="flex">
+            <!-- <div class="flex">
               <span class="my-auto mr-4">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@ const menuItems = reactive([
                 </svg>
               </span>
               +254-110-681-999
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
