@@ -23,10 +23,30 @@ import africas_talking from "../assets/images/partners/af_talking.png";
 import ksa_logo from '../assets/images/news/ksa-logo.webp'
 import ksa_expo from '../assets/images/news/ksa-expo.png'
 import ksa_image from '../assets/images/news/ksa_image.jpeg'
+import copyright_image from '../assets/images/news/news-copyright.jpg'
+import dsa_summit from '../assets/images/news/dsa-summit.png'
 
 export const useNewsStore = defineStore('news', {
   state: () => ({
     activities: [
+      {
+        id: 'copyrights-with-kecobo-and-kipi',
+        title: 'Aegir Consult Secures 5 Copyrights with KECOBO and 1 Trademark with KIPI, Strengthening Intellectual Property Portfolio',
+        // fileType: 'pdf',
+        description: '<div class="max-w-4xl mx-auto px-0 py-12"><p class="mb-4">Aegir Consult Ltd has achieved a major milestone in its journey toward innovation and excellence by securing <strong>5 copyrights</strong> for its flagship software solutions with the Kenya Copyright Board (KECOBO) and obtaining a registered trademark for one of its key systems with the Kenya Industrial Property Institute (KIPI).</p><p class="mb-4">These strategic intellectual property protections underline Aegir Consult\'s dedication to safeguarding its cutting-edge technologies in an increasingly competitive and digitally-driven world.</p><h2 class="text-xl font-semibold text-blue-500 mb-4">The five key copyrighted solutions include:</h2><ul class="list-disc list-inside mb-8 pl-6"><li><strong>SMART-A</strong>: A groundbreaking agri-tech solution that revolutionizes agriculture, specifically crop farming. It streamlines the agricultural value chain, bringing together farmers, suppliers, and manufacturers to improve operational efficiency.</li><li><strong>EBIMS (Enterprise Building Information Management System)</strong>: A GIS-enabled solution designed for the Construction Authorities, offering critical modules for surveillance, identifying, mapping, monitoring construction progress, compliance verification, and even indoor mapping using advanced laser scanning technology.</li><li><strong>ILIS (Infrastructure Location Intelligence System)</strong>: A trademarked solution built for organizations in the utility sector, this system integrates with SAP, Business Central and other business processes to optimize infrastructure management, helping companies maximize their return on investment and operational efficiency.</li><li><strong>PropFusion</strong>: A proprietary Tenancy Management System that automates the management of rental properties, bringing together features for tenant onboarding, lease management, and payments to simplify property administration.</li><li><strong>ELIMS (Enterprise Land Information Management System)</strong>: A comprehensive land management system that supports land administration, property valuation, permits, and licensing, empowering organizations to handle land-related matters efficiently.</li></ul><p class="mb-4">In addition to these five copyrighted solutions, Aegir Consult\'s ILIS has been officially recognized with a registered trademark by KIPI, further solidifying its position as a leader in infrastructure management technologies.</p><h2 class="text-xl font-semibold text-blue-500 mb-4">Safeguarding Innovation in a Digital Age</h2><p class="mb-4">With the rapid rise in copyright infringement and intellectual property theft, the importance of securing proprietary solutions has never been greater. By protecting these key innovations, Aegir Consult ensures that its clients and partners can trust the authenticity and integrity of its award-winning solutions. These legal protections also give the company the competitive edge it needs to continue pushing the boundaries of technology.</p><blockquote class="border-l-4 border-blue-600 pl-4 italic text-gray-700 mb-8">"We are proud to secure copyrights and a trademark for our most innovative products. In today\'s digital age, intellectual property protection is vital to maintaining our edge in the industry and ensuring our clients receive top-tier, legally protected solutions that have been tried, tested, and awarded for their performance."<br><span class="block mt-2 font-bold text-gray-900">- Victor Wahome, CEO and Founder of Aegir Consult Ltd</span></blockquote></div>',
+        image: copyright_image,
+        date: 'October, 2024',
+        year: 2024
+      },
+      {
+        id: 'dsa-2024-global-summit-on-spectrum-management',
+        title: 'Aegir Consult CEO, Victor Wahome, Participates in DSA 2024 Global Summit on Spectrum Management',
+        // fileType: 'pdf',
+        description: '<div class="max-w-4xl mx-auto px-0 py-12"><p class= "text-sm text-gray-500 mb-8" > September 2024, Geneva, Switzerland</p><p class="mb-4">Aegir Consult’s CEO and Founder, <strong>Mr. Victor Wahome</strong>, was honoured to participate in the 12th Annual Dynamic Spectrum Alliance (DSA) Global Summit held in Geneva, Switzerland, from September 23-25, 2024. This prestigious event brought together global regulators, industry experts, and academic leaders to engage in discussions surrounding the theme of <strong>"Spectrum Management with a User-Centric Approach."</strong></p><p class="mb-4">As a key figure in spectrum management advocacy, Mr. Wahome joined thought leaders to discuss the future of dynamic spectrum sharing technologies. The event addressed the evolving needs of users across various sectors, emphasizing the importance of making spectrum resources more efficient and accessible, particularly to foster innovation and connectivity in underserved areas.</p><h2 class="text-xl font-semibold text-blue-500 mb-4">Summit Highlights</h2><p class="mb-4">The summit’s highlights included a regulator-only workshop and public keynote sessions that explored cutting-edge use cases and regulatory advancements. Mr. Wahome\'s participation in the <strong>Regulators Roundtable</strong>, held on the second day, provided an opportunity for deep dives into policy innovations and technical challenges in spectrum management. His insights focused on the need for user-centric spectrum policies that address digital inclusion, especially for Africa and other developing regions.</p><blockquote class="border-l-4 border-blue-600 pl-4 italic text-gray-700 mb-8">"The DSA Global Summit has been a vital platform for shaping the future of spectrum management. By focusing on a user-centric approach, we are advocating for more equitable and efficient access to spectrum, which is essential to driving both innovation and connectivity globally."<br><span class="block mt-2 font-bold text-gray-900">- Victor Wahome, CEO and Founder of Aegir Consult Ltd</span></blockquote><p class="mb-4">Aegir Consult remains committed to working alongside global and regional stakeholders to advocate for dynamic spectrum sharing and support the development of a robust digital economy. The Summit reinforced the company\'s mission to bridge the digital divide by leveraging cutting-edge technologies in spectrum management.</p></div>',
+        image: dsa_summit,
+        date: 'September, 2024',
+        year: 2024
+      },
       {
         id: 'space-technologies-ksec-2024',
         title: 'Leveraging Space Technologies for Climate Action: Aegir Consult Shines at KSEC 2024',
@@ -36,6 +56,7 @@ export const useNewsStore = defineStore('news', {
         date: 'June, 2024',
         year: 2024
       },
+
       {
         id: 'africas-talking-partnership-06-24',
         title: 'Announcing Our Strategic Partnership with Africa\'s Talking Limited',
