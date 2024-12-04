@@ -13,6 +13,7 @@ import ms from '@/assets/images/partners/ms_logo.png'
 import afralti from '@/assets/images/partners/AFRALTI.png'
 import cubic1 from '@/assets/images/partners/Cubic 3D logo.png'
 import africas_talking from '@/assets/images/partners/af_talking.png'
+import fulcrum from '@/assets/images/partners/fulcrum-logo.png'
 
 const partners = reactive([
   // { title: 'ATDI', logoImg: atdi },
@@ -20,7 +21,8 @@ const partners = reactive([
   // { title: 'Esri East Africa', logoImg: esri },
   { title: 'Microsoft Partner', logoImg: ms },
   // { title: 'Flotilla', logoImg: flotilla },
-  { title: 'AFRALTI', logoImg: afralti },
+  // { title: 'AFRALTI', logoImg: afralti },
+  { title: 'Fulcrum', logoImg: fulcrum },
   // { title: 'Cubic 3D', logoImg: cubic1 },
   { title: "Africa's Talking", logoImg: africas_talking },
   // { title: 'Cubic 3D', logoImg: cubic },
