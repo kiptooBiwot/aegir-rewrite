@@ -1,12 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
-  runtimeConfig: {
-    // baseURL: process.env.NUXT_APP_BASE_URL || '/'
-    public: {
-      BASE_API: process.env.BASE_URL
-    }
-  },
+  // runtimeConfig: {
+  //   // baseURL: process.env.NUXT_APP_BASE_URL || '/'
+  //   public: {
+  //     baseUrl: '' //process.env.BASE_URL
+  //   }
+  // },
   head() {
     return {
       meta: [{
@@ -127,6 +127,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtagId: 'G-MCWN9S0043',
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL
     }
   },
 
