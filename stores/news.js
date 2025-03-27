@@ -28,11 +28,89 @@ import dsa_summit from '../assets/images/news/dsa-summit.png'
 import amss_study from '../assets/images/news/amss-study.png'
 import big_baraza from '../assets/images/news/big-baraza.png'
 import fulcrum from '../assets/images/news/fulcrum.png'
+import microsoft from '../assets/images/news/ms-partner.png'
 
 
 export const useNewsStore = defineStore('news', {
   state: () => ({
     activities: [
+      // {
+      //   id: 'aegir-partners-with-fulcrum',
+      //   title: 'Aegir Consult Partners with Fulcrum to Revolutionize Field Mobility in Sub-Saharan Africa',
+      //   image: fulcrum,
+      //   description: ``,
+      //   date: 'November, 2024',
+      //   year: 2024
+      // },
+      {
+        id: 'aegir-joins-isv-success-program',
+        title: 'Aegir Consult Limited Joins Microsoft ISV Success Program to Drive Next-Generation Digital Transformation Solutions',
+        image: microsoft,
+        description: `<div class="space-y-6">
+        <p class="font-normal">
+            Aegir Consult Limited is proud to announce its official enrolment in the Microsoft ISV Success Program, a significant milestone that enhances our ability to deliver innovative, AI-driven, and cloud-powered solutions to businesses across various industries.
+        </p>
+        
+        <p class="font-normal">
+            The Microsoft ISV Success Program is designed to support Independent Software Vendors (ISVs) in building, scaling, and commercializing solutions on Microsoft's cloud ecosystem. This achievement underscores Aegir Consult's commitment to leveraging cutting-edge technologies to develop solutions that streamline operations, enhance decision-making, and accelerate digital transformation for our clients.
+        </p>
+        
+        <h2 class="text-xl font-bold mt-8 mb-4">What This Means for Our Clients</h2>
+        
+        <p class="font-normal">
+            With our inclusion in the ISV Success Program, our customers can now expect:
+        </p>
+        
+        <ul class="list-none space-y-3">
+            <li class="flex items-start">
+                <span class="mr-2">✅</span>
+                <span><span class="font-semibold">Enhanced Accessibility</span> – Our solutions are now available on Microsoft AppSource, making it easier for businesses to discover, integrate, and deploy them seamlessly.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-2">✅</span>
+                <span><span class="font-semibold">Faster Innovation</span> – Access to Microsoft's AI, cloud, and development resources means we can roll out new features and capabilities faster than ever.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-2">✅</span>
+                <span><span class="font-semibold">Greater Security & Scalability</span> – By leveraging Microsoft Azure's enterprise-grade infrastructure, our solutions will be more robust, secure, and scalable to support mission-critical operations.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-2">✅</span>
+                <span><span class="font-semibold">Seamless Integration</span> – Our applications are designed to work effortlessly with Microsoft Dynamics 365, Power Platform, and Azure AI, ensuring a smooth digital transformation journey.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-2">✅</span>
+                <span><span class="font-semibold">Optimized Cost & Efficiency</span> – With access to exclusive Microsoft resources, we can drive cost efficiencies while maintaining top-tier quality.</span>
+            </li>
+        </ul>
+        
+        <h2 class="text-xl font-bold mt-8 mb-4">Game-Changing Solutions on the Horizon</h2>
+        
+        <p class="font-normal">
+            As part of our journey in the ISV Success Program, we are developing and enhancing solutions that will redefine industry standards. Expect AI-driven, GIS-enabled, and cloud-first solutions tailored for real estate management, construction oversight, regulatory compliance, and enterprise automation. These innovations will empower businesses to operate more efficiently, make data-driven decisions, and scale with confidence.
+        </p>
+        
+        <h2 class="text-xl font-bold mt-8 mb-4">A Step Forward in Digital Transformation</h2>
+        
+        <blockquote class="border-l-4 border-blue-500 pl-4 italic my-4">
+            <p class="font-normal">
+                "At Aegir Consult, we have always been committed to real innovation, not just buzzwords. By joining Microsoft's ISV Success Program, we are reinforcing our promise to deliver scalable, transformative, and impactful solutions to our customers," said Victor Wahome, CEO of Aegir Consult. "This program allows us to leverage Microsoft's global cloud infrastructure and AI advancements, ensuring that our solutions remain cutting-edge, accessible, and future-ready."
+            </p>
+        </blockquote>
+        
+        <h2 class="text-xl font-bold mt-8 mb-4">Explore Our Solutions</h2>
+        
+        <p class="font-normal">
+            We invite businesses to explore our solutions on Microsoft Marketplace and partner with us in their digital transformation journey once we publish.
+        </p>
+        
+        <p class="font-normal">
+            Stay tuned for more updates as we continue to innovate and push the boundaries of what's possible.
+        </p>
+    </div>`,
+        date: '19th February, 2025 ',
+        year: 2025
+      },
       {
         id: 'aegir-partners-with-fulcrum',
         title: 'Aegir Consult Partners with Fulcrum to Revolutionize Field Mobility in Sub-Saharan Africa',
