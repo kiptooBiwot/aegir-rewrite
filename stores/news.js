@@ -29,6 +29,7 @@ import amss_study from '../assets/images/news/amss-study.png'
 import big_baraza from '../assets/images/news/big-baraza.png'
 import fulcrum from '../assets/images/news/fulcrum.png'
 import microsoft from '../assets/images/news/ms-partner.png'
+import zebra from '../assets/images/news/zebra.png'
 
 
 export const useNewsStore = defineStore('news', {
@@ -42,6 +43,43 @@ export const useNewsStore = defineStore('news', {
       //   date: 'November, 2024',
       //   year: 2024
       // },
+      {
+        id: 'aegir-partners-with-zebra-technologies',
+        title: 'Aegir Consult Joins Zebra Technologies as an Official Reseller Partner',
+        image: zebra,
+        description: `<div class="max-w-4xl mx-auto px-4 py-10 space-y-6 text-gray-800">
+  <p class="text-xl font-semibold">
+    We are proud to announce that <span class="text-blue-600 font-bold">Aegir Consult</span> has officially joined the <span class="text-blue-600 font-bold">Zebra Technologies PartnerConnect</span> program as a Reseller Partner!
+  </p>
+
+  <p>
+    <span class="font-semibold">Zebra Technologies</span> is a global leader in enterprise-grade technology solutions, renowned for its innovative products that empower businesses to gain a performance edge. Through this partnership, <span class="font-semibold">AEGIR</span> is now authorized to provide Zebra’s wide range of industry-leading solutions, including rugged mobile computers, barcode scanners, printers, RFID systems, and more.
+  </p>
+
+  <p>
+    This partnership aligns with our commitment to delivering cutting-edge digital solutions that drive operational efficiency, especially across sectors such as logistics, manufacturing, retail, healthcare, and government services.
+  </p>
+
+  <p>
+    By joining forces with Zebra Technologies, <span class="font-semibold">AEGIR</span> is positioned to offer enhanced value to our clients — combining our local expertise and custom digital platforms with globally trusted hardware and technology.
+  </p>
+
+  <p>
+    We look forward to helping organizations across Africa unlock new possibilities through this collaboration.
+  </p>
+
+  <p class="text-lg font-semibold text-gray-900">
+    Let’s build smarter, more connected operations — together.
+  </p>
+
+  <p>
+    For partnership inquiries or to learn more about Zebra solutions, contact us at <a href="mailto:info@aegirconsult.systems" class="text-blue-600 underline">info@aegirconsult.systems</a>.
+  </p>
+</div>
+`,
+        date: 'April, 2025',
+        year: 2025
+      },
       {
         id: 'aegir-joins-isv-success-program',
         title: 'Aegir Consult Limited Joins Microsoft ISV Success Program to Drive Next-Generation Digital Transformation Solutions',
