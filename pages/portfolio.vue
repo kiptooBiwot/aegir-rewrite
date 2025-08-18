@@ -14,10 +14,60 @@ import tatuCity from '~/assets/images/protfolio/tatu-city.jpg'
 import jms from '~/assets/images/protfolio/JointMedicalStores.png'
 import kimfay from '~/assets/images/protfolio/KimfayLogo.png'
 import montis from '~/assets/images/protfolio/MontisLogo.png'
+import gertrudes from '~/assets/images/protfolio/gertrudes.jpg'
+import gdc from '~/assets/images/protfolio/gdc_logo.webp'
+import molad from '~/assets/images/protfolio/molad.jpg'
+import papermills from '~/assets/images/protfolio/ea-paper-mill.jpg'
+import amref from '~/assets/images/protfolio/Amref-Logo.webp'
 
 definePageMeta({})
 
 const portfolio = ref([
+  {
+    company: 'AMREF',
+    service: 'Office 365 License Supply',
+    logoUrl: amref,
+  },
+  {
+    company: 'Synapsis Trade Network',
+    service: 'New Sale Automation',
+    // logoUrl: papermills,
+  },
+  {
+    company: 'East African Paper Mills',
+    service: 'Performance 365',
+    logoUrl: papermills,
+  },
+  {
+    company: 'Communications Authority',
+    service: 'AMSS Study',
+    logoUrl: ca,
+  },
+  {
+    company: ' East African Paper Mills',
+    service: 'OEE Automation',
+    logoUrl: papermills,
+  },
+  {
+    company: 'KETRACO',
+    service: 'Geospatial Hardware Supply',
+    logoUrl: ketraco,
+  },
+  {
+    company: 'Ministry of Agriculture and Livestock',
+    service: 'SMART-A',
+    logoUrl: molad,
+  },
+  {
+    company: 'Geothermal Development Company',
+    service: 'Geospatial Hardware Supply',
+    logoUrl: gdc,
+  },
+  {
+    company: "Gertrude's Children's Hospital",
+    service: 'Document Management System',
+    logoUrl: gertrudes,
+  },
   {
     company: 'Joint Medical Stores',
     service: 'Health Facility Mapping and Route Optimization',
