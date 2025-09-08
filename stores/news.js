@@ -30,6 +30,9 @@ import big_baraza from '../assets/images/news/big-baraza.png'
 import fulcrum from '../assets/images/news/fulcrum.png'
 import microsoft from '../assets/images/news/ms-partner.png'
 import zebra from '../assets/images/news/zebra.png'
+import itu from '../assets/images/news/itu-africa.png'
+import esri_epc from '../assets/images/news/PR_1_ESRI_EPC.pdf'
+import confex from '../assets/images/news/digital-confex.pdf'
 
 
 export const useNewsStore = defineStore('news', {
@@ -43,6 +46,88 @@ export const useNewsStore = defineStore('news', {
       //   date: 'November, 2024',
       //   year: 2024
       // },
+      {
+        id: 'aegir-consult-ceo-named-among-top-25-tech-leaders-of-the-year at-it-confex-2025',
+        fileType: 'pdf',
+        title: 'Aegir Consult CEO Named Among Top 25 Tech Leaders of the Year at IT Confex 2025',
+        image: pdf,
+        fileUrl: confex,
+        description: `<p>Aegir Consult proudly announces that its Founder and CEO, Victor W. Wahome, has been 
+honoured as one of the Top 25 Tech Leaders of the Year at the 3rd Information Technology 
+Confex (IT Confex 2025), hosted by DigitalConfex on August 23, 2025, at the Holiday Inn 
+Mayur Vihar, New Delhi, India.</p>`,
+        date: 'August, 2025',
+        year: 2025
+      },
+      {
+        id: 'aegir-engages-at-itu',
+        title: 'Aegir Consult Engages at ITU Africa Broadband Maps – Kenya Edition',
+        image: itu,
+        description: `<section class="mb-10">
+      <h2 class="text-xl font-semibold text-blue-700 mb-3">Event Overview</h2>
+      <p>
+        Aegir Consult Limited was honored to participate in the 
+        <span class="font-medium">ITU Africa Broadband Maps – Kenya Edition</span>, 
+        a landmark event convened to advance the implementation of national broadband mapping systems across Africa.
+        Led by the International Telecommunication Union (ITU) with support from the European Commission, the initiative
+        seeks to close connectivity gaps and enable data-driven digital transformation across the continent.
+      </p>
+    </section>
+
+    <!-- Delegation -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-blue-700 mb-3">Aegir at the Forefront of Broadband Mapping</h2>
+      <p>
+        Our delegation — <span class="font-medium">Victor Wahome (CEO)</span> and 
+        <span class="font-medium">Kenneth Mwangi (Geospatial Manager)</span> —
+        actively engaged with regulators, development partners, and industry leaders during the three-day event. Victor
+        contributed to the <em>Technical Deep-Dive Session</em> on Day 2, presenting a private-sector perspective on the
+        architecture, standards, tools, and data ecosystem underpinning effective broadband mapping.
+      </p>
+
+      <div class="bg-white shadow-sm rounded-lg p-5 mt-5">
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Flagship Projects &amp; Practical Insights</h3>
+        <p class="mb-3">Drawing on our extensive track record with the Communications Authority of Kenya (CA), Aegir shared practical insights from flagship projects, including:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>The Kenya Voice and Data Access Gap Report (2021)</li>
+          <li>The Deepening Usage Study for Inclusivity (2022)</li>
+          <li>The Digital Trunked Radio Framework (2023)</li>
+          <li>The ICT Infrastructure Security &amp; Risk Assessment in Northern Kenya (2023)</li>
+          <li>The Automated Mid-Band Spectrum Sharing Study (2024)</li>
+          <li>The Community Networks Mapping Project (2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-blue-700 mb-3">Lessons Learned &amp; Proposals</h2>
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-5">
+        <p class="mb-3">From these experiences, Aegir highlighted the importance of:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Early stakeholder engagement to strengthen collaboration and data sharing.</li>
+          <li>Adopting open standards such as OFDS and OGC for harmonized datasets.</li>
+          <li>Capacity building to ensure the sustainability of broadband mapping platforms beyond donor cycles.</li>
+          <li>Public-private partnerships as a catalyst for investment and inclusivity in digital infrastructure.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Commitment -->
+    <section>
+      <h2 class="text-xl font-semibold text-blue-700 mb-3">Commitment to Africa’s Digital Future</h2>
+      <p class="mb-3">
+        As Africa moves towards the Broadband Commission’s 2030 target of universal, affordable, and good-quality broadband,
+        Aegir Consult reaffirmed its commitment to delivering innovative, scalable, and standards-driven solutions that bridge the digital divide.
+      </p>
+      <p>
+        Our engagement at the ITU Africa Broadband Maps – Kenya Edition underscores our belief that data-driven ecosystems,
+        powered by partnerships, are critical in driving Africa’s digital transformation.
+      </p>
+    </section>`,
+        date: 'August, 2025',
+        year: 2025
+      },
       {
         id: 'aegir-partners-with-zebra-technologies',
         title: 'Aegir Consult Joins Zebra Technologies as an Official Reseller Partner',
@@ -216,6 +301,7 @@ export const useNewsStore = defineStore('news', {
         fileType: 'pdf',
         description: '<p>Nairobi, Kenya - March 11, 2024 - Aegir Consult received the New Markets Award at the 2024 Esri Partner Conference(EPC) held on March 10–11, 2024, in Palm Springs, California.This award was presented to Aegir Consult for exciting wins through leveraging ArcGIS for new markets and new customers.</p>',
         image: pdf,
+        fileUrl: esri_epc,
         date: 'March, 2024',
         year: 2024
       },

@@ -33,7 +33,7 @@ onUnmounted(() => {
           {{ newsStore.activityDetails.title }}
         </h2>
 
-        <div v-if="newsStore.activityDetails.fileType === 'pdf'">
+        <!-- <div v-if="newsStore.activityDetails.fileType === 'pdf'">
           <div
             v-html="newsStore.activityDetails.description"
             class="text-details"
@@ -45,12 +45,6 @@ onUnmounted(() => {
               class="w-[200px] mx-auto object-contain rounded-xl"
             />
           </div>
-
-          <!-- <div class="my-10">
-            <a href="https://www.esri.com/about/newsroom/announcements/esri-recognizes-partners-for-innovation-and-excellence-4/"
-              class="text-lg underline hover:to-blue-600">Awards Granted for Exceptional Achievement Using GIS at Esri
-              Partner Conference </a>
-          </div> -->
           <div class="flex items-center gap-5 mt-5">
             <img
               :src="newsStore.activityDetails.image"
@@ -63,7 +57,38 @@ onUnmounted(() => {
               >Download the Press Release</a
             >
           </div>
+        </div> -->
+        <div v-if="newsStore.activityDetails.fileType === 'pdf'">
+          <div
+            v-html="newsStore.activityDetails.description"
+            class="text-details"
+          ></div>
+
+          <!-- Inline PDF preview -->
+          <div class="my-10">
+            <iframe
+              :src="newsStore.activityDetails.fileUrl"
+              class="w-full h-[600px] border rounded-xl"
+            ></iframe>
+          </div>
+
+          <!-- Download option -->
+          <div class="flex items-center gap-5 mt-5">
+            <img
+              :src="newsStore.activityDetails.image"
+              class="w-10 object-contain"
+              alt=""
+            />
+            <a
+              :href="newsStore.activityDetails.fileUrl"
+              download
+              class="text-lg underline hover:shadow-md"
+            >
+              Download the Press Release
+            </a>
+          </div>
         </div>
+
         <div v-else>
           <div
             v-html="newsStore.activityDetails.description"
