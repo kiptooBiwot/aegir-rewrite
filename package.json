@@ -26,5 +26,8 @@
   },
   "overrides": {
     "vue": "latest"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
