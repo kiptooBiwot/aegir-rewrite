@@ -33,6 +33,9 @@ import zebra from '../assets/images/news/zebra.png'
 import itu from '../assets/images/news/itu-africa.png'
 import esri_epc from '../assets/images/news/PR_1_ESRI_EPC.pdf'
 import confex from '../assets/images/news/digital-confex.pdf'
+import kuza from '../assets/images/news/kuza.png'
+import geosk from '../assets/images/news/geosk-symposium.png'
+import big5 from '../assets/images/news/big5-construct.png'
 
 
 export const useNewsStore = defineStore('news', {
@@ -46,6 +49,158 @@ export const useNewsStore = defineStore('news', {
       //   date: 'November, 2024',
       //   year: 2024
       // },
+      {
+        id: 'aegir-supports-kuza-gis-day',
+        title: 'Aegir Consult Supports KUZA GIS Day 2025 – Empowering the Next Generation of Geospatial Innovators',
+        image: kuza,
+        description: `
+
+
+<section class="prose max-w-none text-gray-700">
+<p><strong>Aegir Consult Limited</strong> is proud to have supported the <strong>KUZA GIS Day 2025</strong> celebrations held on <strong>12th November 2025</strong> at <strong>The Technical University of Kenya (TUK)</strong>. Organized by the Department of Survey and Geospatial Sciences, the event brought together students, faculty, industry leaders, and technology partners to celebrate the transformative power of Geographic Information Systems (GIS) in shaping sustainable futures.</p>
+
+
+<p>This year’s theme, <em>“Geo-Generalist Era: Where Spatial Meets Everything,”</em> resonated strongly with Aegir Consult’s mission of integrating geospatial intelligence across sectors to drive data-informed decisions and digital transformation.</p>
+
+
+<div class="mt-6 p-6 bg-gray-50 border border-gray-100 rounded-md">
+<h3 class="text-lg font-semibold mb-3">Our Presentation</h3>
+<p>Representing Aegir Consult, our team delivered a presentation titled <strong>“Operational GIS: From Field to Decision – Real-World Use Cases from Aegir Consult,”</strong> showcasing practical applications of GIS across energy, construction, land administration, and agriculture. The session highlighted how innovations such as:</p>
+
+
+<ul class="list-disc ml-5 mt-3">
+<li><strong>ILIS</strong></li>
+<li><strong>EBIS</strong></li>
+<li><strong>eLIMS</strong></li>
+<li><strong>SMART-A</strong></li>
+<li><strong>GeoAI analytics</strong></li>
+</ul>
+
+
+<p class="mt-3">are enabling governments, enterprises, and communities to visualize data, enhance efficiency, and improve outcomes.</p>
+</div>
+
+
+<blockquote class="mt-6 border-l-4 border-indigo-600 pl-4 italic text-gray-700">“GIS Day provides an excellent platform for nurturing the next generation of spatial innovators.”<br/><span class="font-semibold not-italic">— Victor Wanderi Wahome, Founder and CEO, Aegir Consult Limited</span></blockquote>
+
+
+<p class="mt-6">Through its continued engagement with academia and professional associations, Aegir Consult remains committed to fostering industry–university collaboration, mentorship, and innovation.</p>
+</section>
+
+<div class="text-sm text-gray-500">
+<div>For media enquiries:</div>
+<div class="mt-1">info@aegirconsult.co.ke</div>
+</div>
+</div>
+</div>`,
+        date: 'December, 2025',
+        year: 2025
+      },
+      {
+        id: 'aegir-at-the-inaugural-geosk-symposium',
+        title: 'Aegir at the Inaugural GeoSK Symposium: Advancing Responsible AI for Geospatial',
+        image: geosk,
+        description: `<div class="px-8 py-10">
+<h2 class="text-xl md:text-2xl font-medium text-gray-900 mb-4">Aegir Consult at the First-Ever GeoSK Symposium 2025</h2>
+<p class="text-gray-600 mb-6">Driving Responsible AI, Open Standards & Public Infrastructure for Africa</p>
+
+
+<section class="prose max-w-none text-gray-700">
+<p><strong>Aegir Consult</strong> was honored to support and participate in the inaugural <strong>GeoSK Symposium 2025</strong> as a sponsor, keynote speaker, and thought leader on responsible AI in geospatial. Our contributions spanned Day 1’s conversations on <strong>AI as Digital Public Infrastructure</strong> and Day 2’s deep dive into <strong>AI Ethics</strong>—reinforcing our commitment to practical innovation, open standards, and trustworthy systems.</p>
+
+
+<h3 class="text-2xl font-bold mt-8">Keynote Highlight: From Maps to Public Infrastructure — AI’s Playbook for Kenya & SSA</h3>
+<p>In his Day 1 keynote, Aegir CEO <strong>Victor Wahome</strong> outlined a pragmatic playbook for transforming geospatial data into Digital Public Infrastructure (DPI)—anchored in open standards, accountable governance, and privacy-by-design.</p>
+
+
+<p class="font-semibold mt-4">Three pillars for national and regional adoption:</p>
+<ul class="list-disc ml-6">
+<li><strong>Interoperability:</strong> Common standards and shared rails to reduce duplication and accelerate service delivery.</li>
+<li><strong>Operational AI:</strong> Move from demos to real-world use—prioritizing workflows that reduce backlog, improve accuracy, and enhance citizen trust.</li>
+<li><strong>Trust & Safety:</strong> Build transparency, auditability, and risk controls from the start—not as afterthoughts.</li>
+</ul>
+
+
+<p class="mt-4">Attendees received a <strong>90‑day adoption checklist</strong>, including three “start‑now” actions for agencies to pilot AI with measurable outcomes, plus a candid assessment of risks and how to de‑risk them through governance, policy alignment, and security guardrails.</p>
+
+
+<h3 class="text-2xl font-bold mt-10">Day 2 Deep Dive: AI Ethics that Scales</h3>
+<p>On Day 2, Aegir presented a practical framework for trustworthy AI—focusing on explainability, fairness, transparency, privacy, and robustness. The session included governance patterns such as ethics boards, use‑case reviews, and ethics‑by‑design checkpoints that make responsible AI repeatable and auditable in the public sector.</p>
+<p>Participants explored toolkits and operational practices for detecting bias, documenting models, and governing AI across its lifecycle.</p>
+
+
+<blockquote class="mt-6 border-l-4 border-indigo-600 pl-4 italic text-gray-700">AI only creates lasting public value when it’s governed. Responsible AI isn’t a slide—it’s a system of people, processes, and tools that protect citizens while accelerating impact.</blockquote>
+
+
+<h3 class="text-2xl font-bold mt-10">Why This Matters</h3>
+<ul class="list-disc ml-6">
+<li><strong>For member states:</strong> A clearer path from pilots to operations—aligning tech with policy, capacity, and measurable KPIs.</li>
+<li><strong>For practitioners:</strong> A concrete ethics toolkit to manage risk and maintain public trust while deploying GeoAI.</li>
+<li><strong>For the region:</strong> Shared learning and shared infrastructure that reduce costs, shorten timelines, and improve outcomes.</li>
+</ul>
+
+
+<h3 class="text-2xl font-bold mt-10">Our Role as Sponsors</h3>
+<p>Aegir supported the convening of policymakers, surveyors, and geospatial professionals across the continent—affirming our belief that regional collaboration is the fastest path to interoperable systems, responsible AI, and improved citizen services.</p>
+
+
+<h3 class="text-2xl font-bold mt-10">Thank You</h3>
+<p>We extend our appreciation to <strong>GeoSK</strong> for hosting a timely, high‑impact forum, and to <strong>RCMRD</strong> for championing regional standards and capacity.</p>
+</section>`,
+        date: 'November, 2025',
+        year: 2025
+      },
+
+      {
+        id: 'aegir-showcases-gis-innovation-big5-construct',
+        title: 'Aegir Consult CEO Victor Wahome Showcases GIS Innovation at Big 5 Construct Kenya 2025',
+        image: big5,
+        description: `<div class="px-8 py-10">
+<h2 class="text-xl md:text-2xl font-medium text-gray-900 mb-4">Aegir Consult at Big 5 Construct Kenya 2025</h2>
+<p class="text-gray-600 mb-6">Driving Digital Construction Intelligence Across Africa</p>
+
+
+<section class="prose max-w-none text-gray-700">
+<p><strong>Aegir Consult’s CEO and Founder, Victor W. Wahome</strong>, was among the distinguished speakers at <strong>Big 5 Construct Kenya 2025</strong>, held at the Sarit Expo Centre in Nairobi from November 5th to 7th.</p>
+
+
+<p>Speaking during the <strong>Big 5 Talks</strong> panel session themed <em>“Geographic Information Systems (GIS) in Construction Project Management”</em>, Victor shared insights on how geospatial intelligence is transforming planning, execution, and management of construction projects across Africa.</p>
+
+
+<blockquote class="mt-6 border-l-4 border-indigo-600 pl-4 italic text-gray-700">“Construction today goes beyond engineering — it’s about leveraging data to deliver smarter, more sustainable infrastructure. GIS provides real-time visibility, enhances coordination, and empowers teams to make informed decisions throughout the project lifecycle.”</blockquote>
+
+
+<p>The session drew construction professionals, engineers, architects, regulators, and technology experts eager to understand how tools like GIS, LiDAR, and BIM are shaping the future of construction management.</p>
+
+
+<p>Victor highlighted Aegir Consult’s pioneering leadership in <strong>integrating GIS, AI, and enterprise systems</strong> within the built environment. He showcased practical implementations across infrastructure, utilities, and land administration—demonstrating how spatial intelligence improves efficiency, reduces costs, and ensures compliance.</p>
+
+
+<h3 class="text-2xl font-bold mt-10">Introducing Aegir Construct</h3>
+<p>Victor unveiled <strong>Aegir Construct</strong>, Aegir’s new vertical dedicated to digital construction intelligence. The initiative focuses on:</p>
+
+
+<ul class="list-disc ml-6">
+<li>LiDAR and drone‑based reality capture</li>
+<li>GIS–BIM integration for design and monitoring</li>
+<li>Construction progress dashboards and digital twins</li>
+<li>Asset lifecycle and maintenance intelligence</li>
+</ul>
+
+
+<p class="mt-4 italic">“Through Aegir Construct, we are bridging the gap between field data, digital models, and executive decision‑making,” Victor noted. “Our goal is to redefine how Africa plans, builds, and manages infrastructure.”</p>
+
+
+<h3 class="text-2xl font-bold mt-10">Why This Matters</h3>
+<p>Aegir’s participation in Big 5 Construct Kenya reinforces its commitment to accelerating <strong>digital transformation</strong> in Africa’s construction ecosystem. The event provided a high‑level platform for collaboration, innovation, and knowledge exchange—aligned with Kenya’s vision for sustainable, technology‑driven infrastructure development.</p>
+
+
+<h3 class="text-2xl font-bold mt-10">About Aegir Consult</h3>
+<p><strong>Aegir Consult Limited</strong> is a leading African technology and consulting firm specializing in geospatial intelligence, enterprise systems, and digital transformation. Through its proprietary solutions—including <strong>eLIMS, ILIS, PropFusion, SMART‑A</strong>, and <strong>Aegir Construct</strong>—Aegir empowers organizations to unlock efficiency, visibility, and sustainability across construction, energy, agriculture, land management, and other critical sectors.</p>
+</section>`,
+        date: 'November 7, 2025',
+        year: 2025
+      },
       {
         id: 'aegir-consult-ceo-named-among-top-25-tech-leaders-of-the-year at-it-confex-2025',
         fileType: 'pdf',
