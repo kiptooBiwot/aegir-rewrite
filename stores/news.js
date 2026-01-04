@@ -93,7 +93,59 @@ export const useNewsStore = defineStore('news', {
 </div>
 </div>
 </div>`,
-        date: 'December, 2025',
+        date: 'November, 2025',
+        year: 2025
+      },
+
+
+      {
+        id: 'aegir-showcases-gis-innovation-big5-construct',
+        title: 'Aegir Consult CEO Victor Wahome Showcases GIS Innovation at Big 5 Construct Kenya 2025',
+        image: big5,
+        description: `<div class="px-8 py-10">
+<h2 class="text-xl md:text-2xl font-medium text-gray-900 mb-4">Aegir Consult at Big 5 Construct Kenya 2025</h2>
+<p class="text-gray-600 mb-6">Driving Digital Construction Intelligence Across Africa</p>
+
+
+<section class="prose max-w-none text-gray-700">
+<p><strong>Aegir Consult’s CEO and Founder, Victor W. Wahome</strong>, was among the distinguished speakers at <strong>Big 5 Construct Kenya 2025</strong>, held at the Sarit Expo Centre in Nairobi from November 5th to 7th.</p>
+
+
+<p>Speaking during the <strong>Big 5 Talks</strong> panel session themed <em>“Geographic Information Systems (GIS) in Construction Project Management”</em>, Victor shared insights on how geospatial intelligence is transforming planning, execution, and management of construction projects across Africa.</p>
+
+
+<blockquote class="mt-6 border-l-4 border-indigo-600 pl-4 italic text-gray-700">“Construction today goes beyond engineering — it’s about leveraging data to deliver smarter, more sustainable infrastructure. GIS provides real-time visibility, enhances coordination, and empowers teams to make informed decisions throughout the project lifecycle.”</blockquote>
+
+
+<p>The session drew construction professionals, engineers, architects, regulators, and technology experts eager to understand how tools like GIS, LiDAR, and BIM are shaping the future of construction management.</p>
+
+
+<p>Victor highlighted Aegir Consult’s pioneering leadership in <strong>integrating GIS, AI, and enterprise systems</strong> within the built environment. He showcased practical implementations across infrastructure, utilities, and land administration—demonstrating how spatial intelligence improves efficiency, reduces costs, and ensures compliance.</p>
+
+
+<h3 class="text-2xl font-bold mt-10">Introducing Aegir Construct</h3>
+<p>Victor unveiled <strong>Aegir Construct</strong>, Aegir’s new vertical dedicated to digital construction intelligence. The initiative focuses on:</p>
+
+
+<ul class="list-disc ml-6">
+<li>LiDAR and drone‑based reality capture</li>
+<li>GIS–BIM integration for design and monitoring</li>
+<li>Construction progress dashboards and digital twins</li>
+<li>Asset lifecycle and maintenance intelligence</li>
+</ul>
+
+
+<p class="mt-4 italic">“Through Aegir Construct, we are bridging the gap between field data, digital models, and executive decision‑making,” Victor noted. “Our goal is to redefine how Africa plans, builds, and manages infrastructure.”</p>
+
+
+<h3 class="text-2xl font-bold mt-10">Why This Matters</h3>
+<p>Aegir’s participation in Big 5 Construct Kenya reinforces its commitment to accelerating <strong>digital transformation</strong> in Africa’s construction ecosystem. The event provided a high‑level platform for collaboration, innovation, and knowledge exchange—aligned with Kenya’s vision for sustainable, technology‑driven infrastructure development.</p>
+
+
+<h3 class="text-2xl font-bold mt-10">About Aegir Consult</h3>
+<p><strong>Aegir Consult Limited</strong> is a leading African technology and consulting firm specializing in geospatial intelligence, enterprise systems, and digital transformation. Through its proprietary solutions—including <strong>eLIMS, ILIS, PropFusion, SMART‑A</strong>, and <strong>Aegir Construct</strong>—Aegir empowers organizations to unlock efficiency, visibility, and sustainability across construction, energy, agriculture, land management, and other critical sectors.</p>
+</section>`,
+        date: 'November 7, 2025',
         year: 2025
       },
       {
@@ -147,58 +199,7 @@ export const useNewsStore = defineStore('news', {
 <h3 class="text-2xl font-bold mt-10">Thank You</h3>
 <p>We extend our appreciation to <strong>GeoSK</strong> for hosting a timely, high‑impact forum, and to <strong>RCMRD</strong> for championing regional standards and capacity.</p>
 </section>`,
-        date: 'November, 2025',
-        year: 2025
-      },
-
-      {
-        id: 'aegir-showcases-gis-innovation-big5-construct',
-        title: 'Aegir Consult CEO Victor Wahome Showcases GIS Innovation at Big 5 Construct Kenya 2025',
-        image: big5,
-        description: `<div class="px-8 py-10">
-<h2 class="text-xl md:text-2xl font-medium text-gray-900 mb-4">Aegir Consult at Big 5 Construct Kenya 2025</h2>
-<p class="text-gray-600 mb-6">Driving Digital Construction Intelligence Across Africa</p>
-
-
-<section class="prose max-w-none text-gray-700">
-<p><strong>Aegir Consult’s CEO and Founder, Victor W. Wahome</strong>, was among the distinguished speakers at <strong>Big 5 Construct Kenya 2025</strong>, held at the Sarit Expo Centre in Nairobi from November 5th to 7th.</p>
-
-
-<p>Speaking during the <strong>Big 5 Talks</strong> panel session themed <em>“Geographic Information Systems (GIS) in Construction Project Management”</em>, Victor shared insights on how geospatial intelligence is transforming planning, execution, and management of construction projects across Africa.</p>
-
-
-<blockquote class="mt-6 border-l-4 border-indigo-600 pl-4 italic text-gray-700">“Construction today goes beyond engineering — it’s about leveraging data to deliver smarter, more sustainable infrastructure. GIS provides real-time visibility, enhances coordination, and empowers teams to make informed decisions throughout the project lifecycle.”</blockquote>
-
-
-<p>The session drew construction professionals, engineers, architects, regulators, and technology experts eager to understand how tools like GIS, LiDAR, and BIM are shaping the future of construction management.</p>
-
-
-<p>Victor highlighted Aegir Consult’s pioneering leadership in <strong>integrating GIS, AI, and enterprise systems</strong> within the built environment. He showcased practical implementations across infrastructure, utilities, and land administration—demonstrating how spatial intelligence improves efficiency, reduces costs, and ensures compliance.</p>
-
-
-<h3 class="text-2xl font-bold mt-10">Introducing Aegir Construct</h3>
-<p>Victor unveiled <strong>Aegir Construct</strong>, Aegir’s new vertical dedicated to digital construction intelligence. The initiative focuses on:</p>
-
-
-<ul class="list-disc ml-6">
-<li>LiDAR and drone‑based reality capture</li>
-<li>GIS–BIM integration for design and monitoring</li>
-<li>Construction progress dashboards and digital twins</li>
-<li>Asset lifecycle and maintenance intelligence</li>
-</ul>
-
-
-<p class="mt-4 italic">“Through Aegir Construct, we are bridging the gap between field data, digital models, and executive decision‑making,” Victor noted. “Our goal is to redefine how Africa plans, builds, and manages infrastructure.”</p>
-
-
-<h3 class="text-2xl font-bold mt-10">Why This Matters</h3>
-<p>Aegir’s participation in Big 5 Construct Kenya reinforces its commitment to accelerating <strong>digital transformation</strong> in Africa’s construction ecosystem. The event provided a high‑level platform for collaboration, innovation, and knowledge exchange—aligned with Kenya’s vision for sustainable, technology‑driven infrastructure development.</p>
-
-
-<h3 class="text-2xl font-bold mt-10">About Aegir Consult</h3>
-<p><strong>Aegir Consult Limited</strong> is a leading African technology and consulting firm specializing in geospatial intelligence, enterprise systems, and digital transformation. Through its proprietary solutions—including <strong>eLIMS, ILIS, PropFusion, SMART‑A</strong>, and <strong>Aegir Construct</strong>—Aegir empowers organizations to unlock efficiency, visibility, and sustainability across construction, energy, agriculture, land management, and other critical sectors.</p>
-</section>`,
-        date: 'November 7, 2025',
+        date: 'September, 2025',
         year: 2025
       },
       {
